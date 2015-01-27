@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+
+  "-//Hibernate/Hibernate Configuration DTD//EN"
+
+  "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+
+
+
+		<!-- Database connection settings -->
+
+		<property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
+
+		<!-- <property name="hibernate.connection.driver_class">org.hsqldb.jdbc.JDBCDriver</property> -->
+
+		<!-- HibernateUtil.java populates these settings from the app.properties -->
+		<!--
+		<property name="hibernate.connection.url">jdbc:hsqldb:hsql://127.0.0.1:60000/test</property>
+		<property name="hibernate.default_schema"></property>
+		<property name="hibernate.connection.username"></property>
+		<property name="hibernate.connection.password"></property>
+		-->
+
+		<property name="hibernate.connection.autocommit">true</property>
+
+		<property name="hibernate.order_inserts">true</property>
+
+		<property name="hibernate.order_updates">true</property>
+
+
+
+
+
+		<!-- JDBC connection pool -->
+
+		<property name="hibernate.c3p0.min_size">5</property>
+
+		<property name="hibernate.c3p0.max_size">20</property>
+
+		<property name="hibernate.c3p0.idle_test_periods">1800</property>
+
+		<property name="hibernate.c3p0.timeout">2800</property>
+
+		<property name="hibernate.c3p0.max_statements">50</property>
+
+		<property name="hibernate.c3p0.acquireRetryAttempts">3</property>
+
+		<property name="hibernate.c3p0.acquireRetryDelay">1000</property>
+
+
+
+		<!-- SQL dialect -->
+
+		<property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
+
+		<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+
+
+
+		<!-- Enable Hibernate's automatic session context management -->
+
+		<property name="current_session_context_class">thread</property>
+
+
+
+		<!-- Disable the second-level cache -->
+
+		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+
+
+		<!-- Echo all executed SQL to stdout -->
+
+		<!-- <property name="hibernate.show_sql">true</property> <property name="hibernate.format_sql">true</property> -->
+
+
+
+		<property name="hibernate.generate_statistics">false</property>
+
+
+
+		<mapping class="org.bshouse.wsdb.beans.Contact" />
+
+
+
+	</session-factory>
+
+
+
+</hibernate-configuration>
+
+ 

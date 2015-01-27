@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="Williams-MacBook-Pro-6.local" name="org.bshouse.wsdb.test.ContactApiTest" skipped="0" tests="8" time="5.256" timestamp="2015-01-26T18:53:58">
+  <properties>
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="env.XPC_SERVICE_NAME" value="0" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="env.SECURITYSESSIONID" value="186a5" />
+    <property name="os.name" value="Mac OS X" />
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/classes" />
+    <property name="env.TMPDIR" value="/var/folders/2h/drmzg9cn6xsbqmvsk02qz4f00000gn/T/" />
+    <property name="env.PWD" value="/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts" />
+    <property name="env.LANG" value="en_US.UTF-8" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="ant.home" value="/usr/local/Cellar/ant/1.9.4/libexec" />
+    <property name="java.runtime.version" value="1.7.0_71-b14" />
+    <property name="env.Apple_PubSub_Socket_Render" value="/private/tmp/com.apple.launchd.VxnOqs3Yu5/Render" />
+    <property name="user.name" value="wjderaad" />
+    <property name="env.USER" value="wjderaad" />
+    <property name="env.SHELL" value="/bin/bash" />
+    <property name="env.__CF_USER_TEXT_ENCODING" value="0x1F5:0x0:0x0" />
+    <property name="env.PATH" value="/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin" />
+    <property name="user.language" value="en" />
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib" />
+    <property name="ant.project.default-target" value="build" />
+    <property name="env.XPC_FLAGS" value="0x0" />
+    <property name="ant.project.name" value="RESTfulContacts" />
+    <property name="java.version" value="1.7.0_71" />
+    <property name="user.timezone" value="" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/endorsed" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="env.SHLVL" value="1" />
+    <property name="file.separator" value="/" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.class.version" value="51.0" />
+    <property name="user.country" value="US" />
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="env.LOGNAME" value="wjderaad" />
+    <property name="ant.file" value="/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/build.xml" />
+    <property name="os.version" value="10.10.1" />
+    <property name="env.TERM_PROGRAM_VERSION" value="343" />
+    <property name="path.separator" value=":" />
+    <property name="java.vm.version" value="24.71-b01" />
+    <property name="ant.library.dir" value="/usr/local/Cellar/ant/1.9.4/libexec/lib" />
+    <property name="junit.output.dir" value="junit" />
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob" />
+    <property name="env.TERM" value="xterm-256color" />
+    <property name="sun.io.unicode.encoding" value="UnicodeBig" />
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="user.home" value="/Users/wjderaad" />
+    <property name="target" value="1.7" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="env.TERM_PROGRAM" value="Apple_Terminal" />
+    <property name="java.library.path" value="/Users/wjderaad/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:." />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="ant.file.RESTfulContacts" value="/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/build.xml" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="gopherProxySet" value="false" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.bshouse.wsdb.test.ContactApiTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/junit/TEST-org.bshouse.wsdb.test.ContactApiTest.xml crashfile=/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/junitvmwatcher9047230874331489105.properties propsfile=/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/junit8307550367674165282.properties" />
+    <property name="java.class.path" value="/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/bin:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/hibernate-4.3.8/antlr-2.7.7.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/hibernate-4.3.8/c3p0-0.9.2.1.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/hibernate-4.3.8/dom4j-1.6.1.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/hibernate-4.3.8/hibernate-c3p0-4.3.8.Final.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/hibernate-4.3.8/hibernate-commons-annotations-4.0.5.Final.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/hibernate-4.3.8/hibernate-core-4.3.8.Final.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/hibernate-4.3.8/hibernate-entitymanager-4.3.8.Final.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/hibernate-4.3.8/hibernate-jpa-2.1-api-1.0.0.Final.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/hibernate-4.3.8/jandex-1.1.0.Final.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/hibernate-4.3.8/javassist-3.18.1-GA.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/hibernate-4.3.8/jboss-logging-3.1.3.GA.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/hibernate-4.3.8/jboss-logging-annotations-1.2.0.Beta1.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/hibernate-4.3.8/jboss-transaction-api_1.2_spec-1.0.0.Final.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/hibernate-4.3.8/mchange-commons-java-0.2.3.4.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/stripes-1.5.7-classloaderfix.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/jetty-client-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/jetty-continuation-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/jetty-deploy-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/jetty-http-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/jetty-io-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/jetty-plus-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/jetty-rewrite-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/jetty-schemas-3.1.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/jetty-security-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/jetty-server-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/jetty-servlet-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/jetty-servlets-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/jetty-util-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/jetty-webapp-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/jetty-xml-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/servlet-api-3.1.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/hsqldb-2.3.2/hsqldb.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/hsqldb-2.3.2/sqltool.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/javax.el-3.0.0.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/javax.servlet.jsp-2.3.2.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/javax.servlet.jsp-api-2.3.1.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/javax.servlet.jsp.jstl-1.2.2.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/jetty-jsp-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/jetty-jsp-jdt-2.3.3.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/org.apache.taglibs.taglibs-standard-impl-1.2.1.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/org.apache.taglibs.taglibs-standard-spec-1.2.1.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/org.eclipse.jdt.core-3.8.2.v20130121.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/org.eclipse.jetty.apache-jsp-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/org.eclipse.jetty.orbit.javax.servlet.jsp.jstl-1.2.0.v201105211821.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/org.eclipse.jetty.orbit.org.eclipse.jdt.core-3.8.2.v20130121.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/org.mortbay.jasper.apache-el-8.0.9.M3.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/jetty-9.2.6/org.mortbay.jasper.apache-jsp-8.0.9.M3.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/commons-logging-1.2.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/src/properties:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/gson-2.3.1.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/commons-lang3-3.3.2.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/commons-cli-1.2.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/commons-codec-1.6.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/commons-logging-1.1.3.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/fluent-hc-4.3.6.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/httpclient-4.3.6.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/httpclient-cache-4.3.6.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/httpcore-4.3.3.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/httpmime-4.3.6.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/commons-io-2.4.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/hamcrest-core-1.3.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/lib/junit-4.12.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-junit4.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.9.4 compiled on April 29 2014" />
+    <property name="env.TERM_SESSION_ID" value="7327C7E0-C90E-436A-B192-3CC4516CD0AB" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="ant.file.type" value="file" />
+    <property name="java.vm.specification.version" value="1.7" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="env.HOME" value="/Users/wjderaad" />
+    <property name="debuglevel" value="source,lines,vars" />
+    <property name="java.io.tmpdir" value="/var/folders/2h/drmzg9cn6xsbqmvsk02qz4f00000gn/T/" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="env.JAVA_MAIN_CLASS_21156" value="org.apache.tools.ant.launch.Launcher" />
+    <property name="env.SSH_AUTH_SOCK" value="/private/tmp/com.apple.launchd.CWnNns4QVQ/Listeners" />
+    <property name="os.arch" value="x86_64" />
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment" />
+    <property name="java.ext.dirs" value="/Users/wjderaad/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
+    <property name="user.dir" value="/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts" />
+    <property name="ant.file.type.RESTfulContacts" value="file" />
+    <property name="line.separator" value="&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="basedir" value="/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts" />
+    <property name="ant.java.version" value="1.7" />
+    <property name="ant.core.lib" value="/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar" />
+    <property name="source" value="1.7" />
+    <property name="file.encoding" value="UTF-8" />
+    <property name="java.specification.version" value="1.7" />
+    <property name="ant.project.invoked-targets" value="ContactApiTest" />
+  </properties>
+  <testcase classname="org.bshouse.wsdb.test.ContactApiTest" name="testContactAddBadDateFormat" time="1.267" />
+  <testcase classname="org.bshouse.wsdb.test.ContactApiTest" name="testContactDeleteInvalid" time="0.189" />
+  <testcase classname="org.bshouse.wsdb.test.ContactApiTest" name="testContactUpdate" time="0.116" />
+  <testcase classname="org.bshouse.wsdb.test.ContactApiTest" name="testContactAddOverflow" time="0.012" />
+  <testcase classname="org.bshouse.wsdb.test.ContactApiTest" name="testContactList" time="0.049" />
+  <testcase classname="org.bshouse.wsdb.test.ContactApiTest" name="testContactAdd" time="0.13" />
+  <testcase classname="org.bshouse.wsdb.test.ContactApiTest" name="testContactAddBadDate" time="0.01" />
+  <testcase classname="org.bshouse.wsdb.test.ContactApiTest" name="testContactDelete" time="0.055" />
+  <system-out><![CDATA[[Server@6d9c705e]: [Thread[main,5,main]]: checkRunning(false) entered
+[Server@6d9c705e]: [Thread[main,5,main]]: checkRunning(false) exited
+[Server@6d9c705e]: [Thread[main,5,main]]: start() entered
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: run() entered
+[Server@6d9c705e]: Initiating startup sequence...
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: server.maxdatabases=10
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: server.remote_open=false
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: server.tls=false
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: server.port=60000
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: server.trace=true
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: server.database.1=file:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/db/dummy;hsqldb.sqllog=3;sql.enforce_names=true;user=dummy;password=dp4hsdb
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: server.acl=WEB-INF/src/properties/server.acl
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: server.database.0=file:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/db/dummy;hsqldb.sqllog=3;sql.enforce_names=true;user=dummy;password=dp4hsdb
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: server.restart_on_shutdown=false
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: server.no_system_exit=true
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: server.silent=false
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: server.default_page=index.html
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: server.dbname.1=prod
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: server.address=127.0.0.1
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: server.dbname.0=dummy
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: server.root=.
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: openServerSocket() entered
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: Got server socket: ServerSocket[addr=/127.0.0.1,localport=60000]
+[Server@6d9c705e]: Server socket opened successfully in 6 ms.
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: openServerSocket() exiting
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: openDatabases() entered
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: Opening database: [file:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/db/dummy]
+[Server@6d9c705e]: Database [index=0, id=0, db=file:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/db/dummy, alias=prod] opened sucessfully in 412 ms.
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: Opening database: [file:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/db/dummy]
+[Server@6d9c705e]: Database [index=1, id=0, db=file:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/WEB-INF/db/dummy, alias=dummy] opened sucessfully in 0 ms.
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: openDatabases() exiting
+[Server@6d9c705e]: Startup sequence completed in 420 ms.
+[Server@6d9c705e]: 2015-01-26 11:53:59.854 HSQLDB server 2.3.2 is online on port 60000
+[Server@6d9c705e]: To close normally, connect and execute SHUTDOWN SQL
+[Server@6d9c705e]: From command line, use [Ctrl]+[C] to abort abruptly
+[Server@6d9c705e]: [Thread[main,5,main]]: start() exiting
+DriverManager.getDriver("jdbc:hsqldb:hsql://127.0.0.1:60000/dummy")
+getDriver returning org.hsqldb.jdbc.JDBCDriver
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: handleConnection(Socket[addr=/127.0.0.1,port=50711,localport=60000]) entered
+Addr '127.0.0.1' matched rule #1:  Addrs 127.0.0.1/32 ALLOW
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: handleConnection() exited
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: handleConnection(Socket[addr=/127.0.0.1,port=50712,localport=60000]) entered
+Addr '127.0.0.1' matched rule #1:  Addrs 127.0.0.1/32 ALLOW
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: handleConnection() exited
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: handleConnection(Socket[addr=/127.0.0.1,port=50713,localport=60000]) entered
+Addr '127.0.0.1' matched rule #1:  Addrs 127.0.0.1/32 ALLOW
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: handleConnection() exited
+[Server@6d9c705e]: [Thread[HSQLDB Connection @f6524a0,5,HSQLDB Connections @6d9c705e]]: 0:Trying to connect user 'dummy' to DB (dummy)
+[Server@6d9c705e]: [Thread[HSQLDB Connection @84a2364,5,HSQLDB Connections @6d9c705e]]: 1:Trying to connect user 'dummy' to DB (dummy)
+[Server@6d9c705e]: [Thread[HSQLDB Connection @24a20a63,5,HSQLDB Connections @6d9c705e]]: 2:Trying to connect user 'dummy' to DB (dummy)
+[Server@6d9c705e]: [Thread[HSQLDB Connection @f6524a0,5,HSQLDB Connections @6d9c705e]]: 0:Connected user 'dummy'
+[Server@6d9c705e]: [Thread[HSQLDB Connection @84a2364,5,HSQLDB Connections @6d9c705e]]: 1:Connected user 'dummy'
+[Server@6d9c705e]: [Thread[HSQLDB Connection @24a20a63,5,HSQLDB Connections @6d9c705e]]: 2:Connected user 'dummy'
+[Server@6d9c705e]: 0:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 1:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 2:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 0:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 1:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 2:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 0:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 2:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 1:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 1:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 0:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 2:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 1:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: handleConnection(Socket[addr=/127.0.0.1,port=50714,localport=60000]) entered
+Addr '127.0.0.1' matched rule #1:  Addrs 127.0.0.1/32 ALLOW
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: handleConnection() exited
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: handleConnection(Socket[addr=/127.0.0.1,port=50715,localport=60000]) entered
+Addr '127.0.0.1' matched rule #1:  Addrs 127.0.0.1/32 ALLOW
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: handleConnection() exited
+[Server@6d9c705e]: 1:SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO
+[Server@6d9c705e]: 1:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 1:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 1:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: [Thread[HSQLDB Connection @106dfb07,5,HSQLDB Connections @6d9c705e]]: 3:Trying to connect user 'dummy' to DB (dummy)
+[Server@6d9c705e]: [Thread[HSQLDB Connection @7e4034bd,5,HSQLDB Connections @6d9c705e]]: 4:Trying to connect user 'dummy' to DB (dummy)
+[Server@6d9c705e]: [Thread[HSQLDB Connection @106dfb07,5,HSQLDB Connections @6d9c705e]]: 3:Connected user 'dummy'
+[Server@6d9c705e]: [Thread[HSQLDB Connection @7e4034bd,5,HSQLDB Connections @6d9c705e]]: 4:Connected user 'dummy'
+[Server@6d9c705e]: 3:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 4:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 3:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 4:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 3:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 4:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 3:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 4:HSQLCLI:GETSESSIONATTR
+testAddBadDateContact: {"message":"\nBirthday must be a valid date formatted like MM/DD/YYYY.","success":false}
+[Server@6d9c705e]: 4:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 4:SQLCLI:SQLPREPARE delete from dummy.contact
+[Server@6d9c705e]: 4:SQLCLI:SQLEXECUTE:1
+[Server@6d9c705e]: 4:HSQLCLI:GETSESSIONATTR
+testDeleteInvalidContact: {"message":"Delete failed because required data is missing","success":false}
+[Server@6d9c705e]: 3:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 3:SQLCLI:SQLPREPARE delete from dummy.contact
+[Server@6d9c705e]: 3:SQLCLI:SQLEXECUTE:1
+java.sql.SQLException: This pooled Connection was explicitly close()ed by a client, not invalidated due to an error.
+	at com.mchange.v2.c3p0.impl.NewPooledConnection.<clinit>(NewPooledConnection.java:54)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:211)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:184)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:200)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1086)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1073)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:44)
+	at com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:648)
+SQLWarning: reason(no data) SQLState(02000) vendor code(-1100)
+[Server@6d9c705e]: 3:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 1:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 1:SQLCLI:SQLPREPARE insert into dummy.contact (id, birthday, email, first, last, cell) values (default, ?, ?, ?, ?, ?)
+[Server@6d9c705e]: 1:SQLCLI:SQLEXECUTE:1
+[Server@6d9c705e]: 1:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 1:HSQLCLI:GETSESSIONATTR
+testUpdateContact(Add): {"data":{"id":11,"nameFirst":"First","nameLast":"Last","numberCell":"1-303-555-1212","email":"user@mail.com"},"success":true}
+ID: 11
+[Server@6d9c705e]: 1:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 1:SQLCLI:SQLPREPARE update dummy.contact set birthday=?, email=?, first=?, last=?, cell=? where id=?
+[Server@6d9c705e]: 1:SQLCLI:SQLEXECUTE:2
+[Server@6d9c705e]: 1:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 1:HSQLCLI:GETSESSIONATTR
+testUpdateContact: {"data":{"id":11,"nameFirst":"First","nameLast":"Last","numberCell":"1-303-555-1212","email":"email@mail.com"},"success":true}
+[Server@6d9c705e]: 1:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 1:SQLCLI:SQLPREPARE delete from dummy.contact
+[Server@6d9c705e]: 1:SQLCLI:SQLEXECUTE:3
+[Server@6d9c705e]: 1:HSQLCLI:GETSESSIONATTR
+testAddOverflowContact: {"message":"\nPhone number must not exceed 30 characters.","success":false}
+[Server@6d9c705e]: 2:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 2:SQLCLI:SQLPREPARE delete from dummy.contact
+[Server@6d9c705e]: 2:SQLCLI:SQLEXECUTE:1
+SQLWarning: reason(no data) SQLState(02000) vendor code(-1100)
+[Server@6d9c705e]: 2:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 0:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 0:SQLCLI:SQLPREPARE select this_.id as id1_0_0_, this_.birthday as birthday2_0_0_, this_.email as email3_0_0_, this_.first as first4_0_0_, this_.last as last5_0_0_, this_.cell as cell6_0_0_ from dummy.contact this_
+[Server@6d9c705e]: 0:SQLCLI:SQLEXECUTE:1
+[Server@6d9c705e]: 0:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 0:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 0:HSQLCLI:GETSESSIONATTR
+1. testContactList: {"data":[],"success":true}
+[Server@6d9c705e]: 2:SQLCLI:SQLPREPARE insert into dummy.contact (id, birthday, email, first, last, cell) values (default, ?, ?, ?, ?, ?)
+[Server@6d9c705e]: 2:SQLCLI:SQLEXECUTE:2
+[Server@6d9c705e]: 2:SQLCLI:SQLEXECUTE:2
+[Server@6d9c705e]: 0:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 0:SQLCLI:SQLEXECUTE:1
+[Server@6d9c705e]: 0:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 0:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 0:HSQLCLI:GETSESSIONATTR
+2. testContactList: {"data":[{"id":12,"nameFirst":"Bill","nameLast":"","numberCell":"","email":""},{"id":13,"nameFirst":"Bob","nameLast":"","numberCell":"","email":""}],"success":true}
+[Server@6d9c705e]: 0:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 0:SQLCLI:SQLPREPARE delete from dummy.contact
+[Server@6d9c705e]: 0:SQLCLI:SQLEXECUTE:2
+[Server@6d9c705e]: 0:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: handleConnection(Socket[addr=/127.0.0.1,port=50724,localport=60000]) entered
+Addr '127.0.0.1' matched rule #1:  Addrs 127.0.0.1/32 ALLOW
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: handleConnection() exited
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: handleConnection(Socket[addr=/127.0.0.1,port=50723,localport=60000]) entered
+Addr '127.0.0.1' matched rule #1:  Addrs 127.0.0.1/32 ALLOW
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: handleConnection() exited
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: handleConnection(Socket[addr=/127.0.0.1,port=50722,localport=60000]) entered
+Addr '127.0.0.1' matched rule #1:  Addrs 127.0.0.1/32 ALLOW
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: handleConnection() exited
+[Server@6d9c705e]: [Thread[HSQLDB Connection @62eabb86,5,HSQLDB Connections @6d9c705e]]: 5:Trying to connect user 'dummy' to DB (dummy)
+[Server@6d9c705e]: [Thread[HSQLDB Connection @7c7dca94,5,HSQLDB Connections @6d9c705e]]: 6:Trying to connect user 'dummy' to DB (dummy)
+[Server@6d9c705e]: [Thread[HSQLDB Connection @5a695248,5,HSQLDB Connections @6d9c705e]]: 7:Trying to connect user 'dummy' to DB (dummy)
+[Server@6d9c705e]: [Thread[HSQLDB Connection @62eabb86,5,HSQLDB Connections @6d9c705e]]: 5:Connected user 'dummy'
+[Server@6d9c705e]: [Thread[HSQLDB Connection @5a695248,5,HSQLDB Connections @6d9c705e]]: 7:Connected user 'dummy'
+[Server@6d9c705e]: 5:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: [Thread[HSQLDB Connection @7c7dca94,5,HSQLDB Connections @6d9c705e]]: 6:Connected user 'dummy'
+[Server@6d9c705e]: 7:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 6:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 5:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 7:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 6:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 5:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 7:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 6:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 5:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 7:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 6:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 7:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 7:SQLCLI:SQLPREPARE insert into dummy.contact (id, birthday, email, first, last, cell) values (default, ?, ?, ?, ?, ?)
+[Server@6d9c705e]: 7:SQLCLI:SQLEXECUTE:1
+[Server@6d9c705e]: 7:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 7:HSQLCLI:GETSESSIONATTR
+testAddContact: {"data":{"id":14,"nameFirst":"First","nameLast":"Last","numberCell":"1-303-555-1212","email":"user@mail.com","birthday":"10/31/2000"},"success":true}
+testAddBadDateContact: {"message":"\nBirthday must be a valid date formatted like MM/DD/YYYY.","success":false}
+[Server@6d9c705e]: 7:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 7:SQLCLI:SQLPREPARE delete from dummy.contact
+[Server@6d9c705e]: 7:SQLCLI:SQLEXECUTE:2
+[Server@6d9c705e]: 7:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 6:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 6:SQLCLI:SQLPREPARE insert into dummy.contact (id, birthday, email, first, last, cell) values (default, ?, ?, ?, ?, ?)
+[Server@6d9c705e]: 6:SQLCLI:SQLEXECUTE:1
+[Server@6d9c705e]: 6:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 6:HSQLCLI:GETSESSIONATTR
+testDeleteContact(Add): {"data":{"id":15,"nameFirst":"First","nameLast":"Last","numberCell":"1-303-555-1212","email":"user@mail.com"},"success":true}
+ID: 15
+[Server@6d9c705e]: 6:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 6:SQLCLI:SQLPREPARE select this_.id as id1_0_0_, this_.birthday as birthday2_0_0_, this_.email as email3_0_0_, this_.first as first4_0_0_, this_.last as last5_0_0_, this_.cell as cell6_0_0_ from dummy.contact this_ where this_.id=?
+[Server@6d9c705e]: 6:SQLCLI:SQLEXECUTE:2
+[Server@6d9c705e]: 6:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 6:SQLCLI:SQLPREPARE delete from dummy.contact where id=?
+[Server@6d9c705e]: 6:SQLCLI:SQLEXECUTE:3
+[Server@6d9c705e]: 6:HSQLCLI:GETSESSIONATTR
+[Server@6d9c705e]: 6:HSQLCLI:GETSESSIONATTR
+testDeleteContact: {"message":"Contact deleted","success":true}
+[Server@6d9c705e]: [Thread[main,5,main]]: stop() entered
+[Server@6d9c705e]: [Thread[main,5,main]]: releaseServerSocket() entered
+[Server@6d9c705e]: [Thread[main,5,main]]: Releasing server socket: [ServerSocket[addr=/127.0.0.1,localport=60000]]
+[Server@6d9c705e]: [Thread[main,5,main]]: releaseServerSocket() exited
+[Server@6d9c705e]: [Thread[main,5,main]]: stop() exiting
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: shutdown() entered
+[Server@6d9c705e]: Initiating shutdown sequence...
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: releaseServerSocket() entered
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: releaseServerSocket() exited
+[Server@6d9c705e]: [Thread[HSQLDB Server @6d9c705e,5,main]]: releaseDatabase(0) entered
+[Server@6d9c705e]: [Thread[HSQLDB Connection @f6524a0,5,HSQLDB Connections @6d9c705e]]: 0:disconnected dummy
+]]></system-out>
+  <system-err><![CDATA[2015-01-26 11:53:59.974:INFO::main: Logging initialized @1753ms
+2015-01-26 11:54:00.096:INFO:oejs.Server:main: jetty-9.2.6.v20141205
+Jan 26, 2015 11:54:00 AM net.sourceforge.stripes.vfs.VFS info
+INFO: Using VFS adapter net.sourceforge.stripes.vfs.DefaultVFS
+Jan 26, 2015 11:54:00 AM net.sourceforge.stripes.controller.multipart.DefaultMultipartWrapperFactory warn
+WARNING: No MultipartWrapper implementation could be loaded
+Jan 26, 2015 11:54:00 AM net.sourceforge.stripes.controller.StripesFilter info
+INFO: Stripes Initialization Complete. Version: 1.5.7-classloaderfix, Build: 1.5.7-classloaderfix
+2015-01-26 11:54:00.678:INFO:oejsh.ContextHandler:main: Started o.e.j.w.WebAppContext@5d8d15f0{/,file:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/,AVAILABLE}
+2015-01-26 11:54:00.689:INFO:oejs.ServerConnector:main: Started ServerConnector@2e57d154{HTTP/1.1}{127.0.0.1:8080}
+2015-01-26 11:54:00.690:INFO:oejs.Server:main: Started @2470ms
+Jan 26, 2015 11:54:00 AM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+Jan 26, 2015 11:54:00 AM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {4.3.8.Final}
+Jan 26, 2015 11:54:00 AM org.hibernate.cfg.Environment <clinit>
+INFO: HHH000206: hibernate.properties not found
+Jan 26, 2015 11:54:00 AM org.hibernate.cfg.Environment buildBytecodeProvider
+INFO: HHH000021: Bytecode provider name : javassist
+Jan 26, 2015 11:54:00 AM org.hibernate.cfg.Configuration configure
+INFO: HHH000043: Configuring from resource: /hibernate.cfg.xml
+Jan 26, 2015 11:54:00 AM org.hibernate.cfg.Configuration getConfigurationInputStream
+INFO: HHH000040: Configuration resource: /hibernate.cfg.xml
+Jan 26, 2015 11:54:00 AM org.hibernate.cfg.Configuration doConfigure
+INFO: HHH000041: Configured SessionFactory: null
+Jan 26, 2015 11:54:01 AM org.hibernate.c3p0.internal.C3P0ConnectionProvider configure
+INFO: HHH010002: C3P0 using driver: org.hsqldb.jdbcDriver at URL: jdbc:hsqldb:hsql://127.0.0.1:60000/dummy
+Jan 26, 2015 11:54:01 AM org.hibernate.c3p0.internal.C3P0ConnectionProvider configure
+INFO: HHH000046: Connection properties: {user=dummy, password=****, autocommit=true}
+Jan 26, 2015 11:54:01 AM org.hibernate.c3p0.internal.C3P0ConnectionProvider configure
+INFO: HHH000006: Autocommit mode: true
+Jan 26, 2015 11:54:01 AM com.mchange.v2.log.MLog <clinit>
+INFO: MLog clients using java 1.4+ standard logging.
+Jan 26, 2015 11:54:01 AM com.mchange.v2.c3p0.C3P0Registry banner
+INFO: Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+Jan 26, 2015 11:54:01 AM com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource getPoolManager
+INFO: Initializing c3p0 pool... com.mchange.v2.c3p0.PoolBackedDataSource@d603be85 [ connectionPoolDataSource -> com.mchange.v2.c3p0.WrapperConnectionPoolDataSource@ff8802f9 [ acquireIncrement -> 3, acquireRetryAttempts -> 3, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, debugUnreturnedConnectionStackTraces -> false, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 2rvxtu97azhj021a8xmeh|3005c294, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 2800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 50, maxStatementsPerConnection -> 0, minPoolSize -> 5, nestedDataSource -> com.mchange.v2.c3p0.DriverManagerDataSource@ce6f93f8 [ description -> null, driverClass -> null, factoryClassLocation -> null, identityToken -> 2rvxtu97azhj021a8xmeh|2c922cc5, jdbcUrl -> jdbc:hsqldb:hsql://127.0.0.1:60000/dummy, properties -> {user=******, password=******, autocommit=true} ], preferredTestQuery -> null, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false; userOverrides: {} ], dataSourceName -> null, factoryClassLocation -> null, identityToken -> 2rvxtu97azhj021a8xmeh|356a69d, numHelperThreads -> 3 ]
+Jan 26, 2015 11:54:01 AM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+Jan 26, 2015 11:54:01 AM org.hibernate.engine.jdbc.internal.LobCreatorBuilder useContextualLobCreation
+INFO: HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+Jan 26, 2015 11:54:01 AM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory <init>
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+Jan 26, 2015 11:54:03 AM net.sourceforge.stripes.validation.expression.ExpressionValidator info
+INFO: Expression validation will be performed using: net.sourceforge.stripes.validation.expression.Jsp21ExpressionExecutor
+Jan 26, 2015 11:54:03 AM org.hibernate.engine.jdbc.spi.SqlExceptionHelper$StandardWarningHandler logWarning
+WARN: SQL Warning Code: -1100, SQLState: 02000
+Jan 26, 2015 11:54:03 AM org.hibernate.engine.jdbc.spi.SqlExceptionHelper$StandardWarningHandler logWarning
+WARN: no data
+Jan 26, 2015 11:54:03 AM org.hibernate.engine.jdbc.spi.SqlExceptionHelper$StandardWarningHandler logWarning
+WARN: SQL Warning Code: -1100, SQLState: 02000
+Jan 26, 2015 11:54:03 AM org.hibernate.engine.jdbc.spi.SqlExceptionHelper$StandardWarningHandler logWarning
+WARN: no data
+2015-01-26 11:54:03.906:INFO:oejs.ServerConnector:main: Stopped ServerConnector@2e57d154{HTTP/1.1}{127.0.0.1:8080}
+2015-01-26 11:54:03.910:INFO:oejsh.ContextHandler:main: Stopped o.e.j.w.WebAppContext@5d8d15f0{/,file:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulContacts/,UNAVAILABLE}
+]]></system-err>
+</testsuite>
