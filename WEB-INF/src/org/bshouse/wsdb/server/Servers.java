@@ -93,7 +93,7 @@ public class Servers {
 	
 	private void startDb() {
 		//Set path to DB
-		File dbDir = new File("WEB-INF/db/dummy");
+		File dbDir = new File("WEB-INF/db/skidummy");
 		
 		//Configure DB settings
 		Properties p = new Properties();
@@ -101,10 +101,10 @@ public class Servers {
 		p.put("server.port", Settings.getDatabasePort());
 		p.put("server.database.0","file:"+dbDir.getAbsolutePath()+
 				";hsqldb.sqllog=3;sql.enforce_names=true;user="+Settings.getDatabaseUser()+";password="+Settings.getDatabasePassword());
-		p.put("server.dbname.0", "dummy");
+		p.put("server.dbname.0", "skidummy");
 		p.put("server.database.1","file:"+dbDir.getAbsolutePath()+
 				";hsqldb.sqllog=3;sql.enforce_names=true;user="+Settings.getDatabaseUser()+";password="+Settings.getDatabasePassword());
-		p.put("server.dbname.1", "prod");
+		p.put("server.dbname.1", "skiprod");
 		p.put("server.silent","false");
 		p.put("server.trace", "true");
 		p.put("server.no_system_exit", "true");

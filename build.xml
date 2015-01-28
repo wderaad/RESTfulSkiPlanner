@@ -3,13 +3,13 @@
               Any modifications will be overwritten.
               To include a user specific buildfile here, simply create one in the same
               directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. --><project basedir="." default="build" name="RESTfulContacts">
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="RESTfulSkiPlanner">
     <property environment="env"/>
     <property name="junit.output.dir" value="junit"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.7"/>
     <property name="source" value="1.7"/>
-    <path id="RESTfulContacts.classpath">
+    <path id="RESTfulSkiPlanner.classpath">
         <pathelement location="WEB-INF/bin"/>
         <pathelement location="WEB-INF/lib/hibernate-4.3.8/antlr-2.7.7.jar"/>
         <pathelement location="WEB-INF/lib/hibernate-4.3.8/c3p0-0.9.2.1.jar"/>
@@ -95,7 +95,7 @@
         <javac debug="true" debuglevel="${debuglevel}" destdir="WEB-INF/bin" includeantruntime="false" source="${source}" target="${target}">
             <src path="WEB-INF/src"/>
             <exclude name="properties/"/>
-            <classpath refid="RESTfulContacts.classpath"/>
+            <classpath refid="RESTfulSkiPlanner.classpath"/>
         </javac>
     </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
@@ -117,18 +117,26 @@
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="org.bshouse.wsdb.test.ContactApiTest" todir="${junit.output.dir}"/>
-            <classpath refid="RESTfulContacts.classpath"/>
+            <classpath refid="RESTfulSkiPlanner.classpath"/>
+        </junit>
+    </target>
+    <target name="SkiPlannerApiTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="org.bshouse.wsdb.test.SkiPlannerApiTest" todir="${junit.output.dir}"/>
+            <classpath refid="RESTfulSkiPlanner.classpath"/>
         </junit>
     </target>
     <target name="TestServer">
         <java classname="org.bshouse.wsdb.server.Servers" failonerror="true" fork="yes">
-            <classpath refid="RESTfulContacts.classpath"/>
+            <classpath refid="RESTfulSkiPlanner.classpath"/>
         </java>
     </target>
     <target name="ProdServer">
         <java classname="org.bshouse.wsdb.server.Servers" failonerror="true" fork="yes">
             <env key="RESTDB" value="prod"/>
-            <classpath refid="RESTfulContacts.classpath"/>
+            <classpath refid="RESTfulSkiPlanner.classpath"/>
         </java>
     </target>
     <target name="DBTest (1)">
@@ -136,7 +144,7 @@
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="org.bshouse.wsdb.test.DBTest" todir="${junit.output.dir}"/>
-            <classpath refid="RESTfulContacts.classpath"/>
+            <classpath refid="RESTfulSkiPlanner.classpath"/>
         </junit>
     </target>
     <target name="junitreport">

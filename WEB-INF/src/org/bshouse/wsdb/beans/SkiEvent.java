@@ -23,8 +23,8 @@ import org.bshouse.wsdb.common.Constants;
  */
 
 @Entity
-@Table(name="contact")
-public class Contact extends BaseBean {
+@Table(name="eventinfo")
+public class SkiEvent extends BaseBean {
 
 	@Id
 	@Column(name="id")
@@ -43,9 +43,18 @@ public class Contact extends BaseBean {
 	@Column(name="email", nullable=true, length=254)
 	private String email = Constants.BLANK_STRING;
 	
-	@Column(name="birthday", nullable=true)
+	@Column(name="skiday", nullable=true)
 	@Temporal(TemporalType.DATE)
-	private Date birthday = null;
+	private Date skiday = null;
+	
+	@Column(name="resort", nullable=true, length=254)
+	private String resort = Constants.BLANK_STRING;
+	
+	@Column(name="pref", nullable=true, length=254)
+	private String pref = Constants.BLANK_STRING;
+	
+	@Column(name="skill", nullable=true, length=254)
+	private String skill = Constants.BLANK_STRING;
 	
 	
 	
@@ -56,7 +65,7 @@ public class Contact extends BaseBean {
 	 * 
 	 */
 	@Transient
-	private transient String bday = Constants.BLANK_STRING;
+	private transient String sday = Constants.BLANK_STRING;
 	@Transient
 	private transient SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
 
@@ -82,16 +91,28 @@ public class Contact extends BaseBean {
 			sb.append("\nEmail address must not exceed 254 characters.");
 		}
 		
-		if(StringUtils.isNotBlank(bday)) {
+		if(StringUtils.isNotBlank(sday)) {
 			//This code is part of the Stripes validation avoidance
 			//When Stripes sets a bday, this code converts it into a Date for DB storage  
 			try {
 				sdf.setLenient(false);
-				birthday = sdf.parse(bday);
+				skiday = sdf.parse(sday);
 			} catch(Exception e) {
-				sb.append("\nBirthday must be a valid date formatted like MM/DD/YYYY.");
+				sb.append("\nSki day must be a valid date formatted like MM/DD/YYYY.");
 			}
 		}
+		
+		if(StringUtils.isNotBlank(resort) && resort.length() > 254) {
+			sb.append("\nResort must not exceed 254 characters.");
+		}
+		
+		if(StringUtils.isNotBlank(pref) && pref.length() > 254) {
+			sb.append("\nEquipment preference must not exceed 254 characters.");
+		}		
+		
+		if(StringUtils.isNotBlank(skill) && skill.length() > 254) {
+			sb.append("\nSkill level must not exceed 254 characters.");
+		}		
 		return sb.toString();
 	}
 	
@@ -141,27 +162,51 @@ public class Contact extends BaseBean {
 		this.email = email;
 	}
 
-	public Date getBirthday() {
-		return birthday;
+	public Date getSkiday() {
+		return skiday;
 	}
 
-	public void setBirthday(Date birthday) {
+	public void setSkiday(Date skiday) {
 		//This extra code is part of the Stripes validation avoidance
-		//It simply set the string version (bday) to the date represented by birthday
-		//This is used when a contact is loaded from the DB by Hibernate
-		if(birthday != null) {
-			this.birthday = birthday;
-			bday = sdf.format(birthday);
+		//It simply set the string version (sday) to the date represented by skihday
+		//This is used when a eventinfo is loaded from the DB by Hibernate
+		if(skiday != null) {
+			this.skiday = skiday;
+			sday = sdf.format(skiday);
 		}
 	}
 
-	public String getBday() {
-		return bday;
+	public String getSday() {
+		return sday;
 	}
 
-	public void setBday(String bday) {
-		if(StringUtils.isNotBlank(bday)) {
-			this.bday = bday;
+	public void setSday(String sday) {
+		if(StringUtils.isNotBlank(sday)) {
+			this.sday = sday;
 		}
+	}
+		
+    public String getResort() {
+		return resort;
+	}
+
+	public void setResort(String resort) {
+		this.resort = resort;
+	}
+	
+	public String getPref() {
+		return pref;
+	}
+
+	public void setPref(String pref) {
+		this.pref = pref;
+	}
+	
+	public String getSkill() {
+		return skill;
+	}
+
+	public void setSkill(String skill) {
+		this.skill = skill;
 	}
 }

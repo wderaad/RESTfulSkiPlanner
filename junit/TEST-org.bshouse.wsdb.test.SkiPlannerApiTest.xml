@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="1" failures="0" hostname="engr2-13-91-dhcp.int.colorado.edu" name="org.bshouse.wsdb.test.SkiPlannerApiTest" skipped="0" tests="1" time="0.595" timestamp="2015-01-28T19:50:15">
+  <properties>
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="env.XPC_SERVICE_NAME" value="0" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="env.SECURITYSESSIONID" value="186a5" />
+    <property name="os.name" value="Mac OS X" />
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/classes" />
+    <property name="env.TMPDIR" value="/var/folders/2h/drmzg9cn6xsbqmvsk02qz4f00000gn/T/" />
+    <property name="env.PWD" value="/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner" />
+    <property name="env.LANG" value="en_US.UTF-8" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="ant.file.type.RESTfulSkiPlanner" value="file" />
+    <property name="ant.home" value="/usr/local/Cellar/ant/1.9.4/libexec" />
+    <property name="java.runtime.version" value="1.7.0_71-b14" />
+    <property name="ant.file.RESTfulSkiPlanner" value="/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/build.xml" />
+    <property name="env.Apple_PubSub_Socket_Render" value="/private/tmp/com.apple.launchd.VxnOqs3Yu5/Render" />
+    <property name="user.name" value="wjderaad" />
+    <property name="env.USER" value="wjderaad" />
+    <property name="env.SHELL" value="/bin/bash" />
+    <property name="env.__CF_USER_TEXT_ENCODING" value="0x1F5:0x0:0x0" />
+    <property name="env.PATH" value="/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin" />
+    <property name="user.language" value="en" />
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib" />
+    <property name="ant.project.default-target" value="build" />
+    <property name="env.XPC_FLAGS" value="0x0" />
+    <property name="ant.project.name" value="RESTfulSkiPlanner" />
+    <property name="java.version" value="1.7.0_71" />
+    <property name="user.timezone" value="" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/endorsed" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="env.SHLVL" value="1" />
+    <property name="file.separator" value="/" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.class.version" value="51.0" />
+    <property name="user.country" value="US" />
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="env.LOGNAME" value="wjderaad" />
+    <property name="ant.file" value="/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/build.xml" />
+    <property name="os.version" value="10.10.1" />
+    <property name="env.TERM_PROGRAM_VERSION" value="343" />
+    <property name="env.JAVA_MAIN_CLASS_25570" value="org.apache.tools.ant.launch.Launcher" />
+    <property name="path.separator" value=":" />
+    <property name="java.vm.version" value="24.71-b01" />
+    <property name="ant.library.dir" value="/usr/local/Cellar/ant/1.9.4/libexec/lib" />
+    <property name="junit.output.dir" value="junit" />
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob" />
+    <property name="env.TERM" value="xterm-256color" />
+    <property name="sun.io.unicode.encoding" value="UnicodeBig" />
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="user.home" value="/Users/wjderaad" />
+    <property name="target" value="1.7" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="env.TERM_PROGRAM" value="Apple_Terminal" />
+    <property name="java.library.path" value="/Users/wjderaad/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:." />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="gopherProxySet" value="false" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.bshouse.wsdb.test.SkiPlannerApiTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/junit/TEST-org.bshouse.wsdb.test.SkiPlannerApiTest.xml crashfile=/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/junitvmwatcher2328104197438152788.properties propsfile=/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/junit3630797845402951324.properties" />
+    <property name="java.class.path" value="/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/bin:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/hibernate-4.3.8/antlr-2.7.7.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/hibernate-4.3.8/c3p0-0.9.2.1.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/hibernate-4.3.8/dom4j-1.6.1.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/hibernate-4.3.8/hibernate-c3p0-4.3.8.Final.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/hibernate-4.3.8/hibernate-commons-annotations-4.0.5.Final.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/hibernate-4.3.8/hibernate-core-4.3.8.Final.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/hibernate-4.3.8/hibernate-entitymanager-4.3.8.Final.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/hibernate-4.3.8/hibernate-jpa-2.1-api-1.0.0.Final.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/hibernate-4.3.8/jandex-1.1.0.Final.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/hibernate-4.3.8/javassist-3.18.1-GA.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/hibernate-4.3.8/jboss-logging-3.1.3.GA.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/hibernate-4.3.8/jboss-logging-annotations-1.2.0.Beta1.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/hibernate-4.3.8/jboss-transaction-api_1.2_spec-1.0.0.Final.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/hibernate-4.3.8/mchange-commons-java-0.2.3.4.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/stripes-1.5.7-classloaderfix.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/jetty-client-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/jetty-continuation-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/jetty-deploy-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/jetty-http-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/jetty-io-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/jetty-plus-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/jetty-rewrite-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/jetty-schemas-3.1.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/jetty-security-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/jetty-server-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/jetty-servlet-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/jetty-servlets-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/jetty-util-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/jetty-webapp-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/jetty-xml-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/servlet-api-3.1.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/hsqldb-2.3.2/hsqldb.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/hsqldb-2.3.2/sqltool.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/javax.el-3.0.0.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/javax.servlet.jsp-2.3.2.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/javax.servlet.jsp-api-2.3.1.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/javax.servlet.jsp.jstl-1.2.2.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/jetty-jsp-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/jetty-jsp-jdt-2.3.3.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/org.apache.taglibs.taglibs-standard-impl-1.2.1.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/org.apache.taglibs.taglibs-standard-spec-1.2.1.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/org.eclipse.jdt.core-3.8.2.v20130121.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/org.eclipse.jetty.apache-jsp-9.2.6.v20141205.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/org.eclipse.jetty.orbit.javax.servlet.jsp.jstl-1.2.0.v201105211821.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/org.eclipse.jetty.orbit.org.eclipse.jdt.core-3.8.2.v20130121.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/org.mortbay.jasper.apache-el-8.0.9.M3.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/jetty-9.2.6/org.mortbay.jasper.apache-jsp-8.0.9.M3.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/commons-logging-1.2.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/src/properties:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/gson-2.3.1.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/commons-lang3-3.3.2.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/commons-cli-1.2.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/commons-codec-1.6.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/commons-logging-1.1.3.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/fluent-hc-4.3.6.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/httpclient-4.3.6.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/httpclient-cache-4.3.6.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/httpcore-4.3.3.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/httpmime-4.3.6.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/commons-io-2.4.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/junit.jar:/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner/WEB-INF/lib/org.hamcrest.core_1.3.0.v201303031735.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-junit4.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.9.4 compiled on April 29 2014" />
+    <property name="env.TERM_SESSION_ID" value="EE1B2BE9-A4FF-431D-8CAC-191A230DEBE3" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="ant.file.type" value="file" />
+    <property name="java.vm.specification.version" value="1.7" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="env.HOME" value="/Users/wjderaad" />
+    <property name="debuglevel" value="source,lines,vars" />
+    <property name="java.io.tmpdir" value="/var/folders/2h/drmzg9cn6xsbqmvsk02qz4f00000gn/T/" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="env.SSH_AUTH_SOCK" value="/private/tmp/com.apple.launchd.CWnNns4QVQ/Listeners" />
+    <property name="os.arch" value="x86_64" />
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment" />
+    <property name="java.ext.dirs" value="/Users/wjderaad/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
+    <property name="user.dir" value="/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner" />
+    <property name="line.separator" value="&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="basedir" value="/Users/wjderaad/Documents/CU-School/Spring15/DataEng(Anderson)/RESTfulSkiPlanner" />
+    <property name="ant.java.version" value="1.7" />
+    <property name="ant.core.lib" value="/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar" />
+    <property name="source" value="1.7" />
+    <property name="file.encoding" value="UTF-8" />
+    <property name="java.specification.version" value="1.7" />
+    <property name="ant.project.invoked-targets" value="SkiPlannerApiTest" />
+  </properties>
+  <testcase classname="org.bshouse.wsdb.test.SkiPlannerApiTest" name="initializationError" time="0.06">
+    <error message="Method addEvent() should be public" type="java.lang.Exception">java.lang.Exception: Method addEvent() should be public
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+</error>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
