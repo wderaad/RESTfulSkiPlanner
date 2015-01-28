@@ -84,7 +84,7 @@
 
 
 
-		<mapping class="org.bshouse.wsdb.beans.Contact" />
+		<mapping class="org.bshouse.wsdb.beans.SkiEvent" />
 
 
 

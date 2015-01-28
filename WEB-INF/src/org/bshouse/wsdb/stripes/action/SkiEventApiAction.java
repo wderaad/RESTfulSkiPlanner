@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
-import org.bshouse.wsdb.beans.Contact;
+import org.bshouse.wsdb.beans.SkiEvent;
 import org.bshouse.wsdb.common.Constants;
 import org.bshouse.wsdb.common.HibernateUtil;
 import org.hibernate.Criteria;
@@ -30,13 +30,13 @@ import net.sourceforge.stripes.action.UrlBinding;
 
 @UrlBinding("/api/1.0/contact/{id}")
 @HttpCache(allow=false)
-public class ContactApiAction extends BaseAction {
+public class SkiEventApiAction extends BaseAction {
 
 	private Session db = HibernateUtil.getSession(); //Database Access
 	private Gson g = new GsonBuilder().setDateFormat("MM/dd/yyyy").create(); //Java Object to JSON converter
 	private Map<String,Object> json = new HashMap<String,Object>(); //HashMap to be converted to JSON
 	private String id = Constants.BLANK_STRING; //Stripes put the ID from the URL here
-	private Contact contact; //Stripes puts the form data here
+	private SkiEvent contact; //Stripes puts the form data here
 	
 	
 	@DefaultHandler
@@ -68,13 +68,13 @@ public class ContactApiAction extends BaseAction {
 	 */
 	private void list() {		
 		//Create a Hibernate Criteria Query for a "Contact" in the database
-		Criteria c = db.createCriteria(Contact.class);
+		Criteria c = db.createCriteria(SkiEvent.class);
 		if(StringUtils.isNotBlank(id)) {
 			//Load the requested contact
 			c.add(Restrictions.eq("id", Long.parseLong(id)));
 		}
 		//Based on the Criteria, List all matches and cast it to a typed list
-		List<Contact> cl = HibernateUtil.castList(Contact.class, c.list());
+		List<SkiEvent> cl = HibernateUtil.castList(SkiEvent.class, c.list());
 		
 		json.put("success",true); //Tell the JavaScript we were successful
 		json.put("data", cl); //Add the List of Contacts
@@ -158,9 +158,9 @@ public class ContactApiAction extends BaseAction {
 		if(StringUtils.isNotBlank(id) && StringUtils.isNumeric(id)) {
 			//The URL ID is present and is a number
 			Long cid = Long.parseLong(id); //Convert URL ID to a Long
-			Criteria c = db.createCriteria(Contact.class); //Create a Criteria Query on Contact
+			Criteria c = db.createCriteria(SkiEvent.class); //Create a Criteria Query on Contact
 			c.add(Restrictions.eq("id", cid)); //Restrict the Query to the requested ID
-			List<Contact> cl = HibernateUtil.castList(Contact.class, c.list()); //List Contact
+			List<SkiEvent> cl = HibernateUtil.castList(SkiEvent.class, c.list()); //List Contact
 			if(cl.size() == 1) {
 				//List returned the 1 expected Contact
 				db.delete(cl.get(0)); //Delete Contact
@@ -194,11 +194,11 @@ public class ContactApiAction extends BaseAction {
 		this.id = id;
 	}
 
-	public Contact getContact() {
+	public SkiEvent getSkiEvent() {
 		return contact;
 	}
 
-	public void setContact(Contact contact) {
+	public void setSkiEvent(SkiEvent contact) {
 		this.contact = contact;
 	}
 

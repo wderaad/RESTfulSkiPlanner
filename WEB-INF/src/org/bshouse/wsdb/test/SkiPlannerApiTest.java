@@ -65,7 +65,7 @@ public class SkiPlannerApiTest {
 	}
 	
 	@Test
-	private void addEvent() {
+	public void addEvent() {
 		//A simple way to add dummy contacts for testing
 		cleanDb();
 		SkiEvent c = new SkiEvent();

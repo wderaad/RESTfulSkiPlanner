@@ -20,7 +20,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
-import org.bshouse.wsdb.beans.Contact;
+import org.bshouse.wsdb.beans.SkiEvent;
 import org.bshouse.wsdb.common.HibernateUtil;
 import org.bshouse.wsdb.common.Settings;
 import org.bshouse.wsdb.server.Servers;
@@ -29,7 +29,7 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class ContactApiTest {
+public class SkiEventApiTest {
 
 	@SuppressWarnings("unused")
 	private Settings s = new Settings(); //Init file based configuration
@@ -63,7 +63,7 @@ public class ContactApiTest {
 	
 	private void addContact(String fname) {
 		//A simple way to add dummy contacts for testing
-		Contact c = new Contact();
+		SkiEvent c = new SkiEvent();
 		c.setNameFirst(fname);
 		db.save(c);
 	}
