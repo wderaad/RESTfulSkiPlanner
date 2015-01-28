@@ -31,6 +31,7 @@ import org.junit.Test;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.Criteria;
 
 public class SkiPlannerApiTest {
 
@@ -64,7 +65,7 @@ public class SkiPlannerApiTest {
 		db.flush();
 	}
 	
-	@Test
+    @Test
 	public void addEvent() {
 		//A simple way to add dummy contacts for testing
 		cleanDb();
@@ -72,8 +73,11 @@ public class SkiPlannerApiTest {
 		String fname = "Will";
 		c.setNameFirst(fname);
 		db.save(c);
-		Query q = db.createSQLQuery("SELECT TOP 1 current_timestamp FROM INFORMATION_SCHEMA.SYSTEM_TABLES");
-		assertEquals(q.list().size(), 1); //Ensure it return 1 item	
+		
+		Criteria crit = db.createCriteria(SkiEvent.class);
+		List<SkiEvent> sel = crit.list();
+		assertTrue(sel.size() == 1);
+		assertTrue("Will".equals(sel.get(0).getNameFirst()));
 
 	}
 	
