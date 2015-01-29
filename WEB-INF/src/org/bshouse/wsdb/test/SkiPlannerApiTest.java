@@ -2,36 +2,19 @@ package org.bshouse.wsdb.test;
 
 import static org.junit.Assert.*;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpDelete;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.client.methods.HttpPut;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.message.BasicNameValuePair;
 import org.bshouse.wsdb.beans.SkiEvent;
 import org.bshouse.wsdb.common.HibernateUtil;
 import org.bshouse.wsdb.common.Settings;
 import org.bshouse.wsdb.server.Servers;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.Criteria;
 
 public class SkiPlannerApiTest {
 
