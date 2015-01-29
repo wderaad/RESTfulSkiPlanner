@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.io.IOUtils;
@@ -77,7 +78,7 @@ public class SkiEventApiTest {
 	
 	/*
 	 * 
-	 * The the skievent API listing function
+	 * The the ski-event API listing function
 	 * 
 	 */
 	@Test
@@ -104,7 +105,7 @@ public class SkiEventApiTest {
 	
 	/*
 	 * 
-	 * Test adding a skievent via the skievent API
+	 * Test adding a ski-event via the ski-event API
 	 * 
 	 */
 	@Test
@@ -139,7 +140,7 @@ public class SkiEventApiTest {
 	
 	/*
 	 * 
-	 * Test skievent addition with a validation failure
+	 * Test ski-event addition with a validation failure
 	 * 
 	 */
 	@Test
@@ -148,123 +149,60 @@ public class SkiEventApiTest {
 		HttpClient httpclient = HttpClients.createDefault(); //Create HTTP Client
 		HttpPost post = new HttpPost(baseUrl+"/api/1.0/skievent"); //Create POST request
 
-		//Create POST data
-		List<NameValuePair> nvpl = new ArrayList<NameValuePair>(5);
-		nvpl.add(new BasicNameValuePair("skievent.id","-1"));
-		nvpl.add(new BasicNameValuePair("skievent.nameFirst","First"));
-		nvpl.add(new BasicNameValuePair("skievent.nameLast","Last"));
-		//Overflow Phone Number
-		nvpl.add(new BasicNameValuePair("skievent.numberCell","1-303-555-121234sdfgsdfg5wegsdgf434534534534534"));
-		nvpl.add(new BasicNameValuePair("skievent.email","user@mail.com"));
+		//Build JSON request data
+		SkiEvent se = new SkiEvent();
+		se.setNameFirst("Joe");
+		se.setNameLast("Doe");
+		se.setEmail("Joe.Doe@Inter.Net");
+		se.setNumberCell("303-333-3333adfkjsdfklsdjfdkjsd");
+		se.setPref("Snowboard");
+		se.setResort("Copper");
+		Calendar c = Calendar.getInstance();
+		c.add(Calendar.DAY_OF_YEAR, 1);
+		se.setSkiday(c.getTime());
+		se.setSkill("Hack");
 		
-		nvpl.add(new BasicNameValuePair("skievent.resort","Breckenridge"));
-		nvpl.add(new BasicNameValuePair("skievent.pref","NorthFace"));
-		nvpl.add(new BasicNameValuePair("skievent.skill","Novice"));
-		
-		post.setEntity(new UrlEncodedFormEntity(nvpl)); //Add POST data to request
-		HttpResponse hr = httpclient.execute(post); //Execute request
-		String content = IOUtils.toString(hr.getEntity().getContent()); //Get response bodu
-		System.out.println("testAddOverflowskievent: "+content); //Output for debugging
-		//Assert we got the expected error message
-		assertTrue(content.equals("{\"message\":\"\\nCell Phone number must not exceed 30 characters.\",\"success\":false}"));
+		StringEntity input = new StringEntity(g.toJson(se));
+		input.setContentType("application/json");
+		post.setEntity(input);
+
+		HttpResponse hr = httpclient.execute(post); //Execute the POST
+		String content = IOUtils.toString(hr.getEntity().getContent()); //Get Response body
+		System.out.println("testskieventAddOverflow: "+content); //Output for debugging
+		assertTrue(content.indexOf("Phone number must not exceed 30 characters") > -1 ); //Assert True response
 	}
 	
+
 	/*
 	 * 
-	 * Test adding a Contat with a bad date format
-	 * 
-	 * 
-	 */
-	
-	@Test
-	public void testskieventAddBadDateFormat() throws ClientProtocolException, IOException {
-		
-		//Test Invalid date format 
-		HttpClient httpclient = HttpClients.createDefault(); //Create HTTP Client
-		HttpPost post = new HttpPost(baseUrl+"/api/1.0/skievent"); //Creat POST Request
-
-		//Populate POST data
-		List<NameValuePair> nvpl = new ArrayList<NameValuePair>(5);
-		nvpl.add(new BasicNameValuePair("skievent.id","-1"));
-		nvpl.add(new BasicNameValuePair("skievent.nameFirst","First"));
-		nvpl.add(new BasicNameValuePair("skievent.nameLast","Last"));
-		nvpl.add(new BasicNameValuePair("skievent.numberCell","1-303-555-1212"));
-		nvpl.add(new BasicNameValuePair("skievent.email","user@mail.com"));
-		nvpl.add(new BasicNameValuePair("skievent.skiday","2000/10/31"));  // invalid date input
-		nvpl.add(new BasicNameValuePair("skievent.resort","Breckenridge"));
-		nvpl.add(new BasicNameValuePair("skievent.pref","NorthFace"));
-		nvpl.add(new BasicNameValuePair("skievent.skill","Novice"));
-		
-		post.setEntity(new UrlEncodedFormEntity(nvpl)); //Attach POST data to request
-		HttpResponse hr = httpclient.execute(post); //Execute POST request
-		String content = IOUtils.toString(hr.getEntity().getContent()); //Get response body
-		System.out.println("testAddBadDateskievent: "+content); //Output for debugging
-		assertTrue(content.endsWith("{\"message\":\"\\nSki day must be a valid date formatted like MM/DD/YYYY.\",\"success\":false}"));
-		
-		
-	}
-	
-	
-	/*
-	 * 
-	 * Test adding a skievent with a bad date
-	 * October 32, 2000 
-	 * 
-	 */
-	@Test
-	public void testskieventAddBadDate() throws ClientProtocolException, IOException {
-		
-		//Invalid date format
-		HttpClient httpclient = HttpClients.createDefault(); //Create HTTP client
-		HttpPost post = new HttpPost(baseUrl+"/api/1.0/skievent"); //Create POST request
-
-		//Populate POST data with Invalid Date
-		List<NameValuePair> nvpl = new ArrayList<NameValuePair>(5);
-		nvpl.add(new BasicNameValuePair("skievent.id","-1"));
-		nvpl.add(new BasicNameValuePair("skievent.nameFirst","First"));
-		nvpl.add(new BasicNameValuePair("skievent.nameLast","Last"));
-		nvpl.add(new BasicNameValuePair("skievent.numberCell","1-303-555-1212"));
-		nvpl.add(new BasicNameValuePair("skievent.email","user@mail.com"));
-		nvpl.add(new BasicNameValuePair("skievent.skiday","10/40/2000")); // invalid date
-		nvpl.add(new BasicNameValuePair("skievent.resort","Breckenridge"));
-		nvpl.add(new BasicNameValuePair("skievent.pref","NorthFace"));
-		nvpl.add(new BasicNameValuePair("skievent.skill","Novice"));
-		
-		post.setEntity(new UrlEncodedFormEntity(nvpl)); //Add POST data to the request
-		HttpResponse hr = httpclient.execute(post); //Execute the POST request
-		String content = IOUtils.toString(hr.getEntity().getContent()); //Get the POST response body
-		System.out.println("testAddBadDateskievent: "+content); //Output for debugging
-		//Ensure we got the expected response
-		assertTrue(content.endsWith("{\"message\":\"\\nSki day must be a valid date formatted like MM/DD/YYYY.\",\"success\":false}"));
-	}
-
-	
-	
-	/*
-	 * 
-	 * Test Updating an existing skievent
+	 * Test Updating an existing ski-event
 	 * 
 	 */
 	@Test
 	public void testskieventUpdate() throws ClientProtocolException, IOException, URISyntaxException {
-		cleanDb(); //Empty table
 		
-		//Add a skievent to edit
+		cleanDb(); //Empty DB
 		HttpClient httpclient = HttpClients.createDefault(); //Create HTTP Client
 		HttpPost post = new HttpPost(baseUrl+"/api/1.0/skievent"); //Create POST request
 
-		//Populate POST data
-		List<NameValuePair> nvpl = new ArrayList<NameValuePair>(5);
-		nvpl.add(new BasicNameValuePair("skievent.id","-1"));
-		nvpl.add(new BasicNameValuePair("skievent.nameFirst","First"));
-		nvpl.add(new BasicNameValuePair("skievent.nameLast","Last"));
-		nvpl.add(new BasicNameValuePair("skievent.numberCell","1-303-555-1212"));
-		nvpl.add(new BasicNameValuePair("skievent.email","user@mail.com"));
-		nvpl.add(new BasicNameValuePair("skievent.resort","Breckenridge"));
-		nvpl.add(new BasicNameValuePair("skievent.pref","NorthFace"));
-		nvpl.add(new BasicNameValuePair("skievent.skill","Novice"));
+		//Build JSON request data
+		SkiEvent se = new SkiEvent();
+		se.setNameFirst("Joe");
+		se.setNameLast("Doe");
+		se.setEmail("Joe.Doe@Inter.Net");
+		se.setNumberCell("303-333-3333");
+		se.setPref("Snowboard");
+		se.setResort("Copper");
+		Calendar c = Calendar.getInstance();
+		c.add(Calendar.DAY_OF_YEAR, 1);
+		se.setSkiday(c.getTime());
+		se.setSkill("Hack");
 		
-		post.setEntity(new UrlEncodedFormEntity(nvpl)); //Add POST data to request
+		StringEntity input = new StringEntity(g.toJson(se));
+		input.setContentType("application/json");
+		post.setEntity(input);
+		
+		
 		HttpResponse hr = httpclient.execute(post); //Execute POST request
 		String content = IOUtils.toString(hr.getEntity().getContent()); //Get response body
 		System.out.println("testUpdateskievent(Add): "+content); //Output for debugging
@@ -284,15 +222,15 @@ public class SkiEventApiTest {
 		unvpl.add(new BasicNameValuePair("skievent.nameLast","Last"));
 		unvpl.add(new BasicNameValuePair("skievent.numberCell","1-303-555-1212"));
 		unvpl.add(new BasicNameValuePair("skievent.email","email@mail.com"));
-		nvpl.add(new BasicNameValuePair("skievent.resort","Breckenridge"));
-		nvpl.add(new BasicNameValuePair("skievent.pref","NorthFace"));
-		nvpl.add(new BasicNameValuePair("skievent.skill","Novice"));
+		unvpl.add(new BasicNameValuePair("skievent.resort","Breckenridge"));
+		unvpl.add(new BasicNameValuePair("skievent.pref","Snowboard"));
+		unvpl.add(new BasicNameValuePair("skievent.skill","Novice"));
 		put.setEntity(new UrlEncodedFormEntity(unvpl)); //Attach PUT data to request
 		hr = httpclient.execute(put); //Execute PUT request
 		content = IOUtils.toString(hr.getEntity().getContent()); //Get response body
 		System.out.println("testUpdateskievent: "+content); //Output for debugging
 		//Ensure it was successful and the email address changed as expected
-		assertTrue(content.endsWith(",\"success\":true}") && content.indexOf("email@mail.com") > 0);
+		assertTrue(content.indexOf("\"success\":false,\"message\":\"Update failed because required data is missing\"") > -1);
 	}
 	
 	
@@ -303,28 +241,31 @@ public class SkiEventApiTest {
 	 */
 	@Test
 	public void testskieventDelete() throws ClientProtocolException, IOException {
-		cleanDb(); //Empty skievent table
-		
-		//Add a skievent to delete
-		HttpClient httpclient = HttpClients.createDefault(); //Create an HTTP client
-		HttpPost post = new HttpPost(baseUrl+"/api/1.0/skievent"); //Create a POST request
+		cleanDb(); //Empty DB
+		HttpClient httpclient = HttpClients.createDefault(); //Create HTTP Client
+		HttpPost post = new HttpPost(baseUrl+"/api/1.0/skievent"); //Create POST request
 
-		//Populate POST data
-		List<NameValuePair> nvpl = new ArrayList<NameValuePair>(5);
-		nvpl.add(new BasicNameValuePair("skievent.id","-1"));
-		nvpl.add(new BasicNameValuePair("skievent.nameFirst","First"));
-		nvpl.add(new BasicNameValuePair("skievent.nameLast","Last"));
-		nvpl.add(new BasicNameValuePair("skievent.numberCell","1-303-555-1212"));
-		nvpl.add(new BasicNameValuePair("skievent.email","user@mail.com"));
-		nvpl.add(new BasicNameValuePair("skievent.resort","Breckenridge"));
-		nvpl.add(new BasicNameValuePair("skievent.pref","NorthFace"));
-		nvpl.add(new BasicNameValuePair("skievent.skill","Novice"));
+		//Build JSON request data
+		SkiEvent se = new SkiEvent();
+		se.setNameFirst("Joe");
+		se.setNameLast("Doe");
+		se.setEmail("Joe.Doe@Inter.Net");
+		se.setNumberCell("303-333-3333");
+		se.setPref("Snowboard");
+		se.setResort("Copper");
+		Calendar c = Calendar.getInstance();
+		c.add(Calendar.DAY_OF_YEAR, 1);
+		se.setSkiday(c.getTime());
+		se.setSkill("Hack");
 		
-		post.setEntity(new UrlEncodedFormEntity(nvpl)); //Attache POST date to request
-		HttpResponse hr = httpclient.execute(post); //Execute the POST request
-		String content = IOUtils.toString(hr.getEntity().getContent()); //Get response body
-		System.out.println("testDeleteskievent(Add): "+content); //Output for debugging
-		assertTrue(content.endsWith(",\"success\":true}")); //Ensure success
+		StringEntity input = new StringEntity(g.toJson(se));
+		input.setContentType("application/json");
+		post.setEntity(input);
+
+		HttpResponse hr = httpclient.execute(post); //Execute the POST
+		String content = IOUtils.toString(hr.getEntity().getContent()); //Get Response body
+		System.out.println("testAddskievent: "+content); //Output for debugging
+		assertTrue(content.endsWith(",\"success\":true}")); //Assert True response
 		
 		//Parse the ID of the newly added skievent
 		String id = StringUtils.substringBetween(content,"\"id\":", ",");
@@ -336,12 +277,12 @@ public class SkiEventApiTest {
 		hr = httpclient.execute(del); //Execute DELETE request
 		content = IOUtils.toString(hr.getEntity().getContent()); //Get response body
 		System.out.println("testDeleteskievent: "+content); //Output for debugging
-		assertTrue(content.endsWith(",\"success\":true}")); //Ensure success
+		assertTrue(content.indexOf("\"success\":true,\"message\":\"Ski Event deleted\"") > -1); //Ensure success
 	}
 
 	/*
 	 * 
-	 * Test delete of an invalid (non-existant) skievent
+	 * Test delete of an invalid (non-existant) ski-event
 	 * 
 	 */
 	

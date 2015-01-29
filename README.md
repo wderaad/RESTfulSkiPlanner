@@ -23,7 +23,7 @@ ant ProdServer
 2. Launch you web browser and go to- http://localhost:8080/
 
 ## Run Server Tests
-ant ContactApiTest
+ant SkiEventApiTest
 
 
 (Note: All 'ant' commands should be run where the build.xml file is located.)

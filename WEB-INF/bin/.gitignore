@@ -1,3 +1,7 @@
+/.DS_Store
+/app.properties
 /com/
+/hibernate.cfg.xml
 /org/
+/properties/
 /scripts/
