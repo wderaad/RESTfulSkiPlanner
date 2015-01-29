@@ -102,8 +102,13 @@ public class SkiEventApiAction extends BaseAction {
 					json.put("data", skievent); //Return the now saved Ski Event
 				} else {
 					//Attempted to Add a Ski Event that already exists
-					json.put("success",false);
-					json.put("message", "Ski Event already exists");
+					//json.put("success",false);
+					json.put("message", "Ski Event already exists. Updating the Ski Event.");
+                    //update here
+                    db.update(skievent); //Update DB
+                    db.flush(); //Commit change
+                    json.put("success",true);
+                    json.put("data", skievent); //return update Ski Event
 				}
 			} else {
 				//The provided information did not fit the model
@@ -136,8 +141,11 @@ public class SkiEventApiAction extends BaseAction {
 					json.put("data", skievent); //return update Ski Event
 				} else {
 					//Attempted to Update a new Ski Event (should be added instead)
-					json.put("success",false);
-					json.put("message", "Ski Event does not exist");
+					//json.put("success",false);
+					json.put("message", "Ski Event does not exist. Adding the new Ski Event. ");
+                    db.save(skievent); //Add the Ski Event
+                    json.put("success",true);
+                    json.put("data", skievent); //Return the now saved Ski Event
 				}
 			} else {
 				//Validation problem
