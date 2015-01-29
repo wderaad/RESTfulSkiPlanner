@@ -296,7 +296,8 @@ public class SkiEventApiTest {
 		String content = IOUtils.toString(hr.getEntity().getContent()); //Get response body
 		System.out.println("testDeleteInvalidskievent: "+content); //Output for debugging
 		//Ensure the proper error message was returned
-		assertTrue(content.equals("{\"message\":\"Delete failed because required data is missing\",\"success\":false}"));
+		
+		assertTrue(content.indexOf("\"success\":false,\"message\":\"Delete failed because required data is missing\"") > -1);
 	}
 	
 }
