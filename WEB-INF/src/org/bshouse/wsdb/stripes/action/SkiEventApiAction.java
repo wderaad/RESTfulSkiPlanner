@@ -23,12 +23,12 @@ import net.sourceforge.stripes.action.UrlBinding;
 
 /*
  * 
- * This action class provides the RESTful Contact API
+ * This action class provides the RESTful Ski Event API
  * 
  */
 
 
-@UrlBinding("/api/1.0/contact/{id}")
+@UrlBinding("/api/1.0/skievent/{id}")
 @HttpCache(allow=false)
 public class SkiEventApiAction extends BaseAction {
 
@@ -36,7 +36,6 @@ public class SkiEventApiAction extends BaseAction {
 	private Gson g = new GsonBuilder().setDateFormat("MM/dd/yyyy").create(); //Java Object to JSON converter
 	private Map<String,Object> json = new HashMap<String,Object>(); //HashMap to be converted to JSON
 	private String id = Constants.BLANK_STRING; //Stripes put the ID from the URL here
-	private SkiEvent contact; //Stripes puts the form data here
 	
 	
 	@DefaultHandler
@@ -44,13 +43,13 @@ public class SkiEventApiAction extends BaseAction {
 		//When a users requests the UrlBinding, Stripes loads this action
 		//Call the method that fits the need of the request
 		String method = getContext().getRequest().getMethod().toUpperCase();
-		if("GET".equals(method)) { //Lookup Contact
+		if("GET".equals(method)) { //Lookup Ski Event
 			list();
-		} else if("POST".equals(method)) { //Add a new contact
+		} else if("POST".equals(method)) { //Add a new Ski Event
 			add();
-		} else if("PUT".equals(method)) { //Update an existing contact
+		} else if("PUT".equals(method)) { //Update an existing Ski Event
 			update();
-		} else if("DELETE".equals(method)) { //Delete an existing contact
+		} else if("DELETE".equals(method)) { //Delete an existing Ski Event
 			delete();
 		} else {
 			json.put("success",false);
@@ -63,48 +62,49 @@ public class SkiEventApiAction extends BaseAction {
 	
 	/*
 	 * 
-	 * Handles requests to list 1 or all Contacts
+	 * Handles requests to list 1 or all Ski Events
 	 * 
 	 */
 	private void list() {		
-		//Create a Hibernate Criteria Query for a "Contact" in the database
+		//Create a Hibernate Criteria Query for a "Ski Event" in the database
 		Criteria c = db.createCriteria(SkiEvent.class);
 		if(StringUtils.isNotBlank(id)) {
-			//Load the requested contact
+			//Load the requested Ski Event
 			c.add(Restrictions.eq("id", Long.parseLong(id)));
 		}
 		//Based on the Criteria, List all matches and cast it to a typed list
 		List<SkiEvent> cl = HibernateUtil.castList(SkiEvent.class, c.list());
 		
 		json.put("success",true); //Tell the JavaScript we were successful
-		json.put("data", cl); //Add the List of Contacts
+		json.put("data", cl); //Add the List of Ski Events
 	}
 	
 	/*
 	 * 
-	 * Handles request to add new Contacts
+	 * Handles request to add new Ski Events
 	 * 
 	 */
 	public void add() {
-		//Add a Contact
-		if(contact != null) {
-			//Stripes put something in the Contact object
-			if(contact.valid().length() == 0) {
+		SkiEvent skievent = g.fromJson(getRequestBody(), SkiEvent.class);
+		//Add a Ski Event
+		if(skievent != null) {
+			//Stripes put something in the Ski Event object
+			if(skievent.valid().length() == 0) {
 				//Validation returns no errors
-				if(contact.getId() == -1L) {
+				if(skievent.getId() == -1L) {
 					//The default ID is set
-					db.save(contact); //Add the contact
+					db.save(skievent); //Add the Ski Event
 					json.put("success",true);
-					json.put("data", contact); //Return the now saved contact
+					json.put("data", skievent); //Return the now saved Ski Event
 				} else {
-					//Attempted to Add a contact that already exists
+					//Attempted to Add a Ski Event that already exists
 					json.put("success",false);
-					json.put("message", "Contact already exists");
+					json.put("message", "Ski Event already exists");
 				}
 			} else {
 				//The provided information did not fit the model
 				json.put("success",false);
-				json.put("message", contact.valid()); //Return validation failure messages
+				json.put("message", skievent.valid()); //Return validation failure messages
 			}
 			
 		} else {
@@ -115,34 +115,34 @@ public class SkiEventApiAction extends BaseAction {
 	}
 	
 	/*
-	 * Handles requests to update an existing Contact
+	 * Handles requests to update an existing Ski Event
 	 */
 	public void update() {
+		SkiEvent skievent = g.fromJson(getRequestBody(), SkiEvent.class);
 		
-		
-		if(contact != null && id != null && contact.getId().equals(Long.parseLong(id))) {
-			//We got a Contact, that was PUT to a URL with an ID number and the Contact.id matches the URL ID
-			if(contact.valid().length() == 0) {
+		if(skievent != null && id != null && skievent.getId().equals(Long.parseLong(id))) {
+			//We got a Ski Event, that was PUT to a URL with an ID number and the Ski Event.id matches the URL ID
+			if(skievent.valid().length() == 0) {
 				//No validation errors
-				if(contact.getId() > -1L) {
+				if(skievent.getId() > -1L) {
 					//The ID is not the default value
-					db.update(contact); //Update DB
+					db.update(skievent); //Update DB
 					db.flush(); //Commit change
 					json.put("success",true);
-					json.put("data", contact); //return update Contact
+					json.put("data", skievent); //return update Ski Event
 				} else {
-					//Attempted to Update a new Contact (should be added instead)
+					//Attempted to Update a new Ski Event (should be added instead)
 					json.put("success",false);
-					json.put("message", "Contact does not exist");
+					json.put("message", "Ski Event does not exist");
 				}
 			} else {
 				//Validation problem
 				json.put("success",false);
-				json.put("message", contact.valid()); //Include validation errors
+				json.put("message", skievent.valid()); //Include validation errors
 			}
 			
 		} else {
-			//No form data or URL ID & Contact.id do not match
+			//No form data or URL ID & Ski Event.id do not match
 			json.put("success",false);
 			json.put("message", "Update failed because required data is missing");
 		}
@@ -151,26 +151,26 @@ public class SkiEventApiAction extends BaseAction {
 	
 	/*
 	 * 
-	 * Handles requests to delete a Contact
+	 * Handles requests to delete a Ski Event
 	 * 
 	 */
 	public void delete() {
 		if(StringUtils.isNotBlank(id) && StringUtils.isNumeric(id)) {
 			//The URL ID is present and is a number
 			Long cid = Long.parseLong(id); //Convert URL ID to a Long
-			Criteria c = db.createCriteria(SkiEvent.class); //Create a Criteria Query on Contact
+			Criteria c = db.createCriteria(SkiEvent.class); //Create a Criteria Query on Ski Event
 			c.add(Restrictions.eq("id", cid)); //Restrict the Query to the requested ID
-			List<SkiEvent> cl = HibernateUtil.castList(SkiEvent.class, c.list()); //List Contact
+			List<SkiEvent> cl = HibernateUtil.castList(SkiEvent.class, c.list()); //List Ski Event
 			if(cl.size() == 1) {
-				//List returned the 1 expected Contact
-				db.delete(cl.get(0)); //Delete Contact
+				//List returned the 1 expected Ski Event
+				db.delete(cl.get(0)); //Delete Ski Event
 				db.flush(); //Commit delete
 				json.put("success",true);
-				json.put("message", "Contact deleted"); //Include message
+				json.put("message", "Ski Event deleted"); //Include message
 			} else {
-				//Attempted to delete a Contact that does not exist
+				//Attempted to delete a Ski Event that does not exist
 				json.put("success",false);
-				json.put("message", "Contact does not exist"); //Include message
+				json.put("message", "Ski Event does not exist"); //Include message
 			}
 			
 		} else {
@@ -194,12 +194,5 @@ public class SkiEventApiAction extends BaseAction {
 		this.id = id;
 	}
 
-	public SkiEvent getSkiEvent() {
-		return contact;
-	}
-
-	public void setSkiEvent(SkiEvent contact) {
-		this.contact = contact;
-	}
 
 }

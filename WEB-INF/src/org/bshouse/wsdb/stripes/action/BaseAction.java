@@ -1,5 +1,7 @@
 package org.bshouse.wsdb.stripes.action;
 
+import java.io.BufferedReader;
+
 import net.sourceforge.stripes.action.ActionBean;
 import net.sourceforge.stripes.action.ActionBeanContext;
 
@@ -27,5 +29,20 @@ public class BaseAction implements ActionBean {
 		
 	}
 	
+	protected String getRequestBody(){
+	    StringBuffer body = new StringBuffer();
+	    String line = null;
+	    try {
+	        BufferedReader reader = getContext().getRequest().getReader();
+	        while ((line = reader.readLine()) != null) {
+	            body.append(line);
+	        }
+	    } catch (Exception e) {
+	        //e.printStackTrace();
+	    }
+
+	    return body.toString();
+	}
+
 
 }

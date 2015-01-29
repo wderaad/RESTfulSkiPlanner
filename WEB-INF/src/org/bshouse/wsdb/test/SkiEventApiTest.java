@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import org.apache.commons.io.IOUtils;
@@ -18,6 +19,7 @@ import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.bshouse.wsdb.beans.SkiEvent;
@@ -29,13 +31,17 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 public class SkiEventApiTest {
 
 	@SuppressWarnings("unused")
 	private Settings s = new Settings(); //Init file based configuration
 	private Session db = HibernateUtil.getSession(); //Init DB connection
 	private static Servers wsdb; //DB & WebServer
-	//Build the Contact API base URL
+	private Gson g = new GsonBuilder().setDateFormat("MM/dd/yyyy").create(); //Java Object to JSON converter
+	//Build the skievent API base URL
 	private final String baseUrl = new String("http://"+Settings.getWebserverIpAddress()+":"+Settings.getWebserverPortHttp());
 	
 	@BeforeClass
@@ -52,17 +58,17 @@ public class SkiEventApiTest {
 	}
 	
 	private void cleanDb() {
-		//A common method for deleting all Contact from the DB
+		//A common method for deleting all skievent from the DB
 		if(StringUtils.isNotBlank(HibernateUtil.getSchema())) {
-			db.createSQLQuery("delete from "+HibernateUtil.getSchema()+".contact").executeUpdate();
+			db.createSQLQuery("delete from "+HibernateUtil.getSchema()+".eventinfo").executeUpdate();
 		} else {
-			db.createSQLQuery("delete from contact").executeUpdate();
+			db.createSQLQuery("delete from eventinfo").executeUpdate();
 		}
 		db.flush();
 	}
 	
-	private void addContact(String fname) {
-		//A simple way to add dummy contacts for testing
+	private void addskievent(String fname) {
+		//A simple way to add dummy skievents for testing
 		SkiEvent c = new SkiEvent();
 		c.setNameFirst(fname);
 		db.save(c);
@@ -71,83 +77,90 @@ public class SkiEventApiTest {
 	
 	/*
 	 * 
-	 * The the Contact API listing function
+	 * The the skievent API listing function
 	 * 
 	 */
 	@Test
-	public void testContactList() throws ClientProtocolException, IOException {
+	public void testskieventList() throws ClientProtocolException, IOException {
 		
-		cleanDb(); //Empty Contact table
+		cleanDb(); //Empty skievent table
 		HttpClient httpclient = HttpClients.createDefault(); //Create a HTTP client
-		HttpGet get = new HttpGet(baseUrl+"/api/1.0/contact"); //Setup a GET request with the Contact API
+		HttpGet get = new HttpGet(baseUrl+"/api/1.0/skievent"); //Setup a GET request with the skievent API
 		HttpResponse hr = httpclient.execute(get); //Run the request
 		String content = IOUtils.toString(hr.getEntity().getContent()); //Get the response body
-		System.out.println("1. testContactList: "+content); //Output the body for debugging
+		System.out.println("1. testskieventList: "+content); //Output the body for debugging
 		assertTrue(content.equals("{\"data\":[],\"success\":true}")); //Assert we got a blank list
 		
 		
-		addContact("Bill"); //Add contact Bill
-		addContact("Bob"); //Add contact Bob
+		addskievent("Bill"); //Add skievent Bill
+		addskievent("Bob"); //Add skievent Bob
 		db.flush(); //Commit
-		get = new HttpGet(baseUrl+"/api/1.0/contact"); //Prepare GET request to list contacts
+		get = new HttpGet(baseUrl+"/api/1.0/skievent"); //Prepare GET request to list skievents
 		hr = httpclient.execute(get); //Execute the Request
 		content = IOUtils.toString(hr.getEntity().getContent()); //Get the response body
-		System.out.println("2. testContactList: "+content); //Output the body for debugging
+		System.out.println("2. testskieventList: "+content); //Output the body for debugging
 		assertTrue(content.endsWith(",\"success\":true}")); //Assert we got a success
 	}
 	
 	/*
 	 * 
-	 * Test adding a contact via the Contact API
+	 * Test adding a skievent via the skievent API
 	 * 
 	 */
 	@Test
-	public void testContactAdd() throws ClientProtocolException, IOException {
+	public void testskieventAdd() throws ClientProtocolException, IOException {
 		cleanDb(); //Empty DB
 		HttpClient httpclient = HttpClients.createDefault(); //Create HTTP Client
-		HttpPost post = new HttpPost(baseUrl+"/api/1.0/contact"); //Create POST request
+		HttpPost post = new HttpPost(baseUrl+"/api/1.0/skievent"); //Create POST request
 
-		//Build POST data
-		List<NameValuePair> nvpl = new ArrayList<NameValuePair>(5);
-		nvpl.add(new BasicNameValuePair("contact.id","-1"));
-		nvpl.add(new BasicNameValuePair("contact.nameFirst","First"));
-		nvpl.add(new BasicNameValuePair("contact.nameLast","Last"));
-		nvpl.add(new BasicNameValuePair("contact.numberCell","1-303-555-1212"));
-		nvpl.add(new BasicNameValuePair("contact.email","user@mail.com"));
-		nvpl.add(new BasicNameValuePair("contact.bday","10/31/2000"));
+		//Build JSON request data
+		SkiEvent se = new SkiEvent();
+		se.setNameFirst("Joe");
+		se.setNameLast("Doe");
+		se.setEmail("Joe.Doe@Inter.Net");
+		se.setNumberCell("303-333-3333");
+		se.setPref("Snowboard");
+		se.setResort("Copper");
+		Calendar c = Calendar.getInstance();
+		c.add(Calendar.DAY_OF_YEAR, 1);
+		se.setSkiday(c.getTime());
+		se.setSkill("Hack");
 		
-		post.setEntity(new UrlEncodedFormEntity(nvpl)); //Include post data in Request
+		StringEntity input = new StringEntity(g.toJson(se));
+		input.setContentType("application/json");
+		post.setEntity(input);
+
 		HttpResponse hr = httpclient.execute(post); //Execute the POST
 		String content = IOUtils.toString(hr.getEntity().getContent()); //Get Response body
-		System.out.println("testAddContact: "+content); //Output for debugging
+		System.out.println("testAddskievent: "+content); //Output for debugging
 		assertTrue(content.endsWith(",\"success\":true}")); //Assert True response
 	}
 	
 	
 	/*
 	 * 
-	 * Test Contact addition with a validation failure
+	 * Test skievent addition with a validation failure
 	 * 
 	 */
 	@Test
-	public void testContactAddOverflow() throws ClientProtocolException, IOException {
+	public void testskieventAddOverflow() throws ClientProtocolException, IOException {
 		cleanDb(); //Empty DB
 		HttpClient httpclient = HttpClients.createDefault(); //Create HTTP Client
-		HttpPost post = new HttpPost(baseUrl+"/api/1.0/contact"); //Create POST request
+		HttpPost post = new HttpPost(baseUrl+"/api/1.0/skievent"); //Create POST request
 
 		//Create POST data
 		List<NameValuePair> nvpl = new ArrayList<NameValuePair>(5);
-		nvpl.add(new BasicNameValuePair("contact.id","-1"));
-		nvpl.add(new BasicNameValuePair("contact.nameFirst","First"));
-		nvpl.add(new BasicNameValuePair("contact.nameLast","Last"));
+		nvpl.add(new BasicNameValuePair("skievent.id","-1"));
+		nvpl.add(new BasicNameValuePair("skievent.nameFirst","First"));
+		nvpl.add(new BasicNameValuePair("skievent.nameLast","Last"));
 		//Overflow Phone Number
-		nvpl.add(new BasicNameValuePair("contact.numberCell","1-303-555-121234sdfgsdfg5wegsdgf434534534534534"));
-		nvpl.add(new BasicNameValuePair("contact.email","user@mail.com"));
+		nvpl.add(new BasicNameValuePair("skievent.numberCell","1-303-555-121234sdfgsdfg5wegsdgf434534534534534"));
+		nvpl.add(new BasicNameValuePair("skievent.email","user@mail.com"));
 		
 		post.setEntity(new UrlEncodedFormEntity(nvpl)); //Add POST data to request
 		HttpResponse hr = httpclient.execute(post); //Execute request
 		String content = IOUtils.toString(hr.getEntity().getContent()); //Get response bodu
-		System.out.println("testAddOverflowContact: "+content); //Output for debugging
+		System.out.println("testAddOverflowskievent: "+content); //Output for debugging
 		//Assert we got the expected error message
 		assertTrue(content.equals("{\"message\":\"\\nPhone number must not exceed 30 characters.\",\"success\":false}"));
 	}
@@ -160,25 +173,25 @@ public class SkiEventApiTest {
 	 */
 	
 	@Test
-	public void testContactAddBadDateFormat() throws ClientProtocolException, IOException {
+	public void testskieventAddBadDateFormat() throws ClientProtocolException, IOException {
 		
 		//Test Invalid date format 
 		HttpClient httpclient = HttpClients.createDefault(); //Create HTTP Client
-		HttpPost post = new HttpPost(baseUrl+"/api/1.0/contact"); //Creat POST Request
+		HttpPost post = new HttpPost(baseUrl+"/api/1.0/skievent"); //Creat POST Request
 
 		//Populate POST data
 		List<NameValuePair> nvpl = new ArrayList<NameValuePair>(5);
-		nvpl.add(new BasicNameValuePair("contact.id","-1"));
-		nvpl.add(new BasicNameValuePair("contact.nameFirst","First"));
-		nvpl.add(new BasicNameValuePair("contact.nameLast","Last"));
-		nvpl.add(new BasicNameValuePair("contact.numberCell","1-303-555-1212"));
-		nvpl.add(new BasicNameValuePair("contact.email","user@mail.com"));
-		nvpl.add(new BasicNameValuePair("contact.bday","2000/10/31"));
+		nvpl.add(new BasicNameValuePair("skievent.id","-1"));
+		nvpl.add(new BasicNameValuePair("skievent.nameFirst","First"));
+		nvpl.add(new BasicNameValuePair("skievent.nameLast","Last"));
+		nvpl.add(new BasicNameValuePair("skievent.numberCell","1-303-555-1212"));
+		nvpl.add(new BasicNameValuePair("skievent.email","user@mail.com"));
+		nvpl.add(new BasicNameValuePair("skievent.bday","2000/10/31"));
 		
 		post.setEntity(new UrlEncodedFormEntity(nvpl)); //Attach POST data to request
 		HttpResponse hr = httpclient.execute(post); //Execute POST request
 		String content = IOUtils.toString(hr.getEntity().getContent()); //Get response body
-		System.out.println("testAddBadDateContact: "+content); //Output for debugging
+		System.out.println("testAddBadDateskievent: "+content); //Output for debugging
 		assertTrue(content.endsWith("{\"message\":\"\\nBirthday must be a valid date formatted like MM/DD/YYYY.\",\"success\":false}"));
 		
 		
@@ -187,30 +200,30 @@ public class SkiEventApiTest {
 	
 	/*
 	 * 
-	 * Test adding a Contact with a bad date
+	 * Test adding a skievent with a bad date
 	 * October 32, 2000 
 	 * 
 	 */
 	@Test
-	public void testContactAddBadDate() throws ClientProtocolException, IOException {
+	public void testskieventAddBadDate() throws ClientProtocolException, IOException {
 		
 		//Invalid date format
 		HttpClient httpclient = HttpClients.createDefault(); //Create HTTP client
-		HttpPost post = new HttpPost(baseUrl+"/api/1.0/contact"); //Create POST request
+		HttpPost post = new HttpPost(baseUrl+"/api/1.0/skievent"); //Create POST request
 
 		//Populate POST data with Invalid Date
 		List<NameValuePair> nvpl = new ArrayList<NameValuePair>(5);
-		nvpl.add(new BasicNameValuePair("contact.id","-1"));
-		nvpl.add(new BasicNameValuePair("contact.nameFirst","First"));
-		nvpl.add(new BasicNameValuePair("contact.nameLast","Last"));
-		nvpl.add(new BasicNameValuePair("contact.numberCell","1-303-555-1212"));
-		nvpl.add(new BasicNameValuePair("contact.email","user@mail.com"));
-		nvpl.add(new BasicNameValuePair("contact.bday","10/32/2000"));
+		nvpl.add(new BasicNameValuePair("skievent.id","-1"));
+		nvpl.add(new BasicNameValuePair("skievent.nameFirst","First"));
+		nvpl.add(new BasicNameValuePair("skievent.nameLast","Last"));
+		nvpl.add(new BasicNameValuePair("skievent.numberCell","1-303-555-1212"));
+		nvpl.add(new BasicNameValuePair("skievent.email","user@mail.com"));
+		nvpl.add(new BasicNameValuePair("skievent.bday","10/32/2000"));
 		
 		post.setEntity(new UrlEncodedFormEntity(nvpl)); //Add POST data to the request
 		HttpResponse hr = httpclient.execute(post); //Execute the POST request
 		String content = IOUtils.toString(hr.getEntity().getContent()); //Get the POST response body
-		System.out.println("testAddBadDateContact: "+content); //Output for debugging
+		System.out.println("testAddBadDateskievent: "+content); //Output for debugging
 		//Ensure we got the expected response
 		assertTrue(content.endsWith("{\"message\":\"\\nBirthday must be a valid date formatted like MM/DD/YYYY.\",\"success\":false}"));
 	}
@@ -219,49 +232,49 @@ public class SkiEventApiTest {
 	
 	/*
 	 * 
-	 * Test Updating an existing contact
+	 * Test Updating an existing skievent
 	 * 
 	 */
 	@Test
-	public void testContactUpdate() throws ClientProtocolException, IOException, URISyntaxException {
+	public void testskieventUpdate() throws ClientProtocolException, IOException, URISyntaxException {
 		cleanDb(); //Empty table
 		
-		//Add a contact to edit
+		//Add a skievent to edit
 		HttpClient httpclient = HttpClients.createDefault(); //Create HTTP Client
-		HttpPost post = new HttpPost(baseUrl+"/api/1.0/contact"); //Create POST request
+		HttpPost post = new HttpPost(baseUrl+"/api/1.0/skievent"); //Create POST request
 
 		//Populate POST data
 		List<NameValuePair> nvpl = new ArrayList<NameValuePair>(5);
-		nvpl.add(new BasicNameValuePair("contact.id","-1"));
-		nvpl.add(new BasicNameValuePair("contact.nameFirst","First"));
-		nvpl.add(new BasicNameValuePair("contact.nameLast","Last"));
-		nvpl.add(new BasicNameValuePair("contact.numberCell","1-303-555-1212"));
-		nvpl.add(new BasicNameValuePair("contact.email","user@mail.com"));
+		nvpl.add(new BasicNameValuePair("skievent.id","-1"));
+		nvpl.add(new BasicNameValuePair("skievent.nameFirst","First"));
+		nvpl.add(new BasicNameValuePair("skievent.nameLast","Last"));
+		nvpl.add(new BasicNameValuePair("skievent.numberCell","1-303-555-1212"));
+		nvpl.add(new BasicNameValuePair("skievent.email","user@mail.com"));
 		
 		post.setEntity(new UrlEncodedFormEntity(nvpl)); //Add POST data to request
 		HttpResponse hr = httpclient.execute(post); //Execute POST request
 		String content = IOUtils.toString(hr.getEntity().getContent()); //Get response body
-		System.out.println("testUpdateContact(Add): "+content); //Output for debugging
-		assertTrue(content.endsWith(",\"success\":true}")); //Assert Contact was added
+		System.out.println("testUpdateskievent(Add): "+content); //Output for debugging
+		assertTrue(content.endsWith(",\"success\":true}")); //Assert skievent was added
 		
-		//Parse the ID of the newly added Contact
+		//Parse the ID of the newly added skievent
 		String id = StringUtils.substringBetween(content,"\"id\":", ",");
 
 		System.out.println("ID: "+id); //Output for debugging
 		
-		//Edit contact
-		HttpPut put = new HttpPut(baseUrl+"/api/1.0/contact/"+id); //Create a PUT request
+		//Edit skievent
+		HttpPut put = new HttpPut(baseUrl+"/api/1.0/skievent/"+id); //Create a PUT request
 		//Populate PUT data
 		List<NameValuePair> unvpl = new ArrayList<NameValuePair>(5);
-		unvpl.add(new BasicNameValuePair("contact.id",id));
-		unvpl.add(new BasicNameValuePair("contact.nameFirst","First"));
-		unvpl.add(new BasicNameValuePair("contact.nameLast","Last"));
-		unvpl.add(new BasicNameValuePair("contact.numberCell","1-303-555-1212"));
-		unvpl.add(new BasicNameValuePair("contact.email","email@mail.com"));
+		unvpl.add(new BasicNameValuePair("skievent.id",id));
+		unvpl.add(new BasicNameValuePair("skievent.nameFirst","First"));
+		unvpl.add(new BasicNameValuePair("skievent.nameLast","Last"));
+		unvpl.add(new BasicNameValuePair("skievent.numberCell","1-303-555-1212"));
+		unvpl.add(new BasicNameValuePair("skievent.email","email@mail.com"));
 		put.setEntity(new UrlEncodedFormEntity(unvpl)); //Attach PUT data to request
 		hr = httpclient.execute(put); //Execute PUT request
 		content = IOUtils.toString(hr.getEntity().getContent()); //Get response body
-		System.out.println("testUpdateContact: "+content); //Output for debugging
+		System.out.println("testUpdateskievent: "+content); //Output for debugging
 		//Ensure it was successful and the email address changed as expected
 		assertTrue(content.endsWith(",\"success\":true}") && content.indexOf("email@mail.com") > 0);
 	}
@@ -269,59 +282,59 @@ public class SkiEventApiTest {
 	
 	/*
 	 * 
-	 * Test Contact delete
+	 * Test skievent delete
 	 * 
 	 */
 	@Test
-	public void testContactDelete() throws ClientProtocolException, IOException {
-		cleanDb(); //Empty Contact table
+	public void testskieventDelete() throws ClientProtocolException, IOException {
+		cleanDb(); //Empty skievent table
 		
-		//Add a contact to delete
+		//Add a skievent to delete
 		HttpClient httpclient = HttpClients.createDefault(); //Create an HTTP client
-		HttpPost post = new HttpPost(baseUrl+"/api/1.0/contact"); //Create a POST request
+		HttpPost post = new HttpPost(baseUrl+"/api/1.0/skievent"); //Create a POST request
 
 		//Populate POST data
 		List<NameValuePair> nvpl = new ArrayList<NameValuePair>(5);
-		nvpl.add(new BasicNameValuePair("contact.id","-1"));
-		nvpl.add(new BasicNameValuePair("contact.nameFirst","First"));
-		nvpl.add(new BasicNameValuePair("contact.nameLast","Last"));
-		nvpl.add(new BasicNameValuePair("contact.numberCell","1-303-555-1212"));
-		nvpl.add(new BasicNameValuePair("contact.email","user@mail.com"));
+		nvpl.add(new BasicNameValuePair("skievent.id","-1"));
+		nvpl.add(new BasicNameValuePair("skievent.nameFirst","First"));
+		nvpl.add(new BasicNameValuePair("skievent.nameLast","Last"));
+		nvpl.add(new BasicNameValuePair("skievent.numberCell","1-303-555-1212"));
+		nvpl.add(new BasicNameValuePair("skievent.email","user@mail.com"));
 		
 		post.setEntity(new UrlEncodedFormEntity(nvpl)); //Attache POST date to request
 		HttpResponse hr = httpclient.execute(post); //Execute the POST request
 		String content = IOUtils.toString(hr.getEntity().getContent()); //Get response body
-		System.out.println("testDeleteContact(Add): "+content); //Output for debugging
+		System.out.println("testDeleteskievent(Add): "+content); //Output for debugging
 		assertTrue(content.endsWith(",\"success\":true}")); //Ensure success
 		
-		//Parse the ID of the newly added Contact
+		//Parse the ID of the newly added skievent
 		String id = StringUtils.substringBetween(content,"\"id\":", ",");
 
 		System.out.println("ID: "+id); //Output for debugging
 		
-		//Delete contact
-		HttpDelete del = new HttpDelete(baseUrl+"/api/1.0/contact/"+id); //Create DELETE request
+		//Delete skievent
+		HttpDelete del = new HttpDelete(baseUrl+"/api/1.0/skievent/"+id); //Create DELETE request
 		hr = httpclient.execute(del); //Execute DELETE request
 		content = IOUtils.toString(hr.getEntity().getContent()); //Get response body
-		System.out.println("testDeleteContact: "+content); //Output for debugging
+		System.out.println("testDeleteskievent: "+content); //Output for debugging
 		assertTrue(content.endsWith(",\"success\":true}")); //Ensure success
 	}
 
 	/*
 	 * 
-	 * Test delete of an invalid (non-existant) Contact
+	 * Test delete of an invalid (non-existant) skievent
 	 * 
 	 */
 	
 	@Test
-	public void testContactDeleteInvalid() throws ClientProtocolException, IOException {
-		cleanDb(); //Empty Contact table
+	public void testskieventDeleteInvalid() throws ClientProtocolException, IOException {
+		cleanDb(); //Empty skievent table
 		HttpClient httpclient = HttpClients.createDefault(); //Create HTTP Client
-		//Delete contact
-		HttpDelete del = new HttpDelete(baseUrl+"/api/1.0/contact/abc123"); //Create DELETE request
+		//Delete skievent
+		HttpDelete del = new HttpDelete(baseUrl+"/api/1.0/skievent/abc123"); //Create DELETE request
 		HttpResponse hr = httpclient.execute(del); //Execute DELETE request
 		String content = IOUtils.toString(hr.getEntity().getContent()); //Get response body
-		System.out.println("testDeleteInvalidContact: "+content); //Output for debugging
+		System.out.println("testDeleteInvalidskievent: "+content); //Output for debugging
 		//Ensure the proper error message was returned
 		assertTrue(content.equals("{\"message\":\"Delete failed because required data is missing\",\"success\":false}"));
 	}
