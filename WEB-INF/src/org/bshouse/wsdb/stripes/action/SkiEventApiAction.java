@@ -1,5 +1,6 @@
 package org.bshouse.wsdb.stripes.action;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -72,6 +73,9 @@ public class SkiEventApiAction extends BaseAction {
 			//Load the requested Ski Event
 			c.add(Restrictions.eq("id", Long.parseLong(id)));
 		}
+        else {
+            c.add(Restrictions.ge("skiday", new Date()));
+        }
 		//Based on the Criteria, List all matches and cast it to a typed list
 		List<SkiEvent> cl = HibernateUtil.castList(SkiEvent.class, c.list());
 		
