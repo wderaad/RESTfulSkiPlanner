@@ -157,6 +157,10 @@ public class SkiEventApiTest {
 		nvpl.add(new BasicNameValuePair("skievent.numberCell","1-303-555-121234sdfgsdfg5wegsdgf434534534534534"));
 		nvpl.add(new BasicNameValuePair("skievent.email","user@mail.com"));
 		
+		nvpl.add(new BasicNameValuePair("skievent.resort","Breckenridge"));
+		nvpl.add(new BasicNameValuePair("skievent.pref","NorthFace"));
+		nvpl.add(new BasicNameValuePair("skievent.skill","Novice"));
+		
 		post.setEntity(new UrlEncodedFormEntity(nvpl)); //Add POST data to request
 		HttpResponse hr = httpclient.execute(post); //Execute request
 		String content = IOUtils.toString(hr.getEntity().getContent()); //Get response bodu
@@ -221,7 +225,7 @@ public class SkiEventApiTest {
 		nvpl.add(new BasicNameValuePair("skievent.nameLast","Last"));
 		nvpl.add(new BasicNameValuePair("skievent.numberCell","1-303-555-1212"));
 		nvpl.add(new BasicNameValuePair("skievent.email","user@mail.com"));
-		nvpl.add(new BasicNameValuePair("skievent.skiday","10/32/2000")); // invalid date
+		nvpl.add(new BasicNameValuePair("skievent.skiday","10/40/2000")); // invalid date
 		nvpl.add(new BasicNameValuePair("skievent.resort","Breckenridge"));
 		nvpl.add(new BasicNameValuePair("skievent.pref","NorthFace"));
 		nvpl.add(new BasicNameValuePair("skievent.skill","Novice"));
