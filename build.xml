@@ -112,11 +112,11 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="ContactApiTest">
+    <target name="SkiEventApiTest">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
-            <test name="org.bshouse.wsdb.test.ContactApiTest" todir="${junit.output.dir}"/>
+            <test name="org.bshouse.wsdb.test.SkiEventApiTest" todir="${junit.output.dir}"/>
             <classpath refid="RESTfulSkiPlanner.classpath"/>
         </junit>
     </target>
