@@ -162,7 +162,7 @@ public class SkiEventApiTest {
 		String content = IOUtils.toString(hr.getEntity().getContent()); //Get response bodu
 		System.out.println("testAddOverflowskievent: "+content); //Output for debugging
 		//Assert we got the expected error message
-		assertTrue(content.equals("{\"message\":\"\\nPhone number must not exceed 30 characters.\",\"success\":false}"));
+		assertTrue(content.equals("{\"message\":\"\\nCell Phone number must not exceed 30 characters.\",\"success\":false}"));
 	}
 	
 	/*
@@ -186,13 +186,16 @@ public class SkiEventApiTest {
 		nvpl.add(new BasicNameValuePair("skievent.nameLast","Last"));
 		nvpl.add(new BasicNameValuePair("skievent.numberCell","1-303-555-1212"));
 		nvpl.add(new BasicNameValuePair("skievent.email","user@mail.com"));
-		nvpl.add(new BasicNameValuePair("skievent.bday","2000/10/31"));
+		nvpl.add(new BasicNameValuePair("skievent.skiday","2000/10/31"));  // invalid date input
+		nvpl.add(new BasicNameValuePair("skievent.resort","Breckenridge"));
+		nvpl.add(new BasicNameValuePair("skievent.pref","NorthFace"));
+		nvpl.add(new BasicNameValuePair("skievent.skill","Novice"));
 		
 		post.setEntity(new UrlEncodedFormEntity(nvpl)); //Attach POST data to request
 		HttpResponse hr = httpclient.execute(post); //Execute POST request
 		String content = IOUtils.toString(hr.getEntity().getContent()); //Get response body
 		System.out.println("testAddBadDateskievent: "+content); //Output for debugging
-		assertTrue(content.endsWith("{\"message\":\"\\nBirthday must be a valid date formatted like MM/DD/YYYY.\",\"success\":false}"));
+		assertTrue(content.endsWith("{\"message\":\"\\nSki day must be a valid date formatted like MM/DD/YYYY.\",\"success\":false}"));
 		
 		
 	}
@@ -218,14 +221,17 @@ public class SkiEventApiTest {
 		nvpl.add(new BasicNameValuePair("skievent.nameLast","Last"));
 		nvpl.add(new BasicNameValuePair("skievent.numberCell","1-303-555-1212"));
 		nvpl.add(new BasicNameValuePair("skievent.email","user@mail.com"));
-		nvpl.add(new BasicNameValuePair("skievent.bday","10/32/2000"));
+		nvpl.add(new BasicNameValuePair("skievent.skiday","10/32/2000")); // invalid date
+		nvpl.add(new BasicNameValuePair("skievent.resort","Breckenridge"));
+		nvpl.add(new BasicNameValuePair("skievent.pref","NorthFace"));
+		nvpl.add(new BasicNameValuePair("skievent.skill","Novice"));
 		
 		post.setEntity(new UrlEncodedFormEntity(nvpl)); //Add POST data to the request
 		HttpResponse hr = httpclient.execute(post); //Execute the POST request
 		String content = IOUtils.toString(hr.getEntity().getContent()); //Get the POST response body
 		System.out.println("testAddBadDateskievent: "+content); //Output for debugging
 		//Ensure we got the expected response
-		assertTrue(content.endsWith("{\"message\":\"\\nBirthday must be a valid date formatted like MM/DD/YYYY.\",\"success\":false}"));
+		assertTrue(content.endsWith("{\"message\":\"\\nSki day must be a valid date formatted like MM/DD/YYYY.\",\"success\":false}"));
 	}
 
 	
@@ -250,6 +256,9 @@ public class SkiEventApiTest {
 		nvpl.add(new BasicNameValuePair("skievent.nameLast","Last"));
 		nvpl.add(new BasicNameValuePair("skievent.numberCell","1-303-555-1212"));
 		nvpl.add(new BasicNameValuePair("skievent.email","user@mail.com"));
+		nvpl.add(new BasicNameValuePair("skievent.resort","Breckenridge"));
+		nvpl.add(new BasicNameValuePair("skievent.pref","NorthFace"));
+		nvpl.add(new BasicNameValuePair("skievent.skill","Novice"));
 		
 		post.setEntity(new UrlEncodedFormEntity(nvpl)); //Add POST data to request
 		HttpResponse hr = httpclient.execute(post); //Execute POST request
@@ -271,6 +280,9 @@ public class SkiEventApiTest {
 		unvpl.add(new BasicNameValuePair("skievent.nameLast","Last"));
 		unvpl.add(new BasicNameValuePair("skievent.numberCell","1-303-555-1212"));
 		unvpl.add(new BasicNameValuePair("skievent.email","email@mail.com"));
+		nvpl.add(new BasicNameValuePair("skievent.resort","Breckenridge"));
+		nvpl.add(new BasicNameValuePair("skievent.pref","NorthFace"));
+		nvpl.add(new BasicNameValuePair("skievent.skill","Novice"));
 		put.setEntity(new UrlEncodedFormEntity(unvpl)); //Attach PUT data to request
 		hr = httpclient.execute(put); //Execute PUT request
 		content = IOUtils.toString(hr.getEntity().getContent()); //Get response body
@@ -300,6 +312,9 @@ public class SkiEventApiTest {
 		nvpl.add(new BasicNameValuePair("skievent.nameLast","Last"));
 		nvpl.add(new BasicNameValuePair("skievent.numberCell","1-303-555-1212"));
 		nvpl.add(new BasicNameValuePair("skievent.email","user@mail.com"));
+		nvpl.add(new BasicNameValuePair("skievent.resort","Breckenridge"));
+		nvpl.add(new BasicNameValuePair("skievent.pref","NorthFace"));
+		nvpl.add(new BasicNameValuePair("skievent.skill","Novice"));
 		
 		post.setEntity(new UrlEncodedFormEntity(nvpl)); //Attache POST date to request
 		HttpResponse hr = httpclient.execute(post); //Execute the POST request
