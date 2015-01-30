@@ -1,6 +1,8 @@
 # RESTfulSkiPlace
 A simple REST application for basic contact management (See the Wiki for more detailed information)
 
+## Team: Pure Freaky Magic (PFM)
+
 ## Framework Configuration
 * Stripes Framework
 * Jetty
