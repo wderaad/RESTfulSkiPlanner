@@ -2296,3 +2296,23 @@ CREATE SCHEMA skidummy;
 2015-01-30 09:07:04.643 17 ROLLBACK 
 2015-01-30 09:07:04.643 16 ROLLBACK 
 2015-01-30 09:07:04.643 15 ROLLBACK 
+2015-01-30 15:33:50.447 12 call database_version() 
+2015-01-30 15:33:50.447 12 COMMIT 
+2015-01-30 15:33:50.451 12 call database_version() 
+2015-01-30 15:33:50.451 12 COMMIT 
+2015-01-30 15:33:50.452 12 call database_version() 
+2015-01-30 15:33:50.452 12 COMMIT 
+2015-01-30 15:33:50.455 12 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-30 15:37:50.927 4 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-30 15:41:30.842 4 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-30 15:46:42.952 2 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-30 15:50:01.403 4 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-30 16:09:47.777 4 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-30 16:09:48.682 6 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-30')
+2015-01-30 16:09:48.682 6 COMMIT 
+2015-01-30 16:22:08.359 4 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-30 16:22:10.090 4 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-30')
+2015-01-30 16:22:10.090 4 COMMIT 
+2015-01-30 16:40:07.971 3 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-30 16:40:08.626 6 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-30')
+2015-01-30 16:40:08.626 6 COMMIT 
