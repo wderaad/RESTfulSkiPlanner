@@ -1089,3 +1089,1210 @@ CREATE SCHEMA skidummy;
 2015-01-29 15:27:22.338 17 ROLLBACK 
 2015-01-29 15:27:22.338 15 ROLLBACK 
 2015-01-29 15:27:22.338 16 ROLLBACK 
+2015-01-29 15:30:29.096 10 call database_version() 
+2015-01-29 15:30:29.106 10 COMMIT 
+2015-01-29 15:30:29.106 10 call database_version() 
+2015-01-29 15:30:29.106 10 COMMIT 
+2015-01-29 15:30:29.106 10 call database_version() 
+2015-01-29 15:30:29.106 10 COMMIT 
+2015-01-29 15:30:29.116 10 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-29 15:30:29.476 14 delete from skidummy.eventinfo 
+2015-01-29 15:30:29.546 14 COMMIT 
+2015-01-29 15:30:29.846 13 delete from skidummy.eventinfo 
+2015-01-29 15:30:29.846 13 COMMIT 
+2015-01-29 15:30:29.877 10 delete from skidummy.eventinfo 
+2015-01-29 15:30:29.877 10 COMMIT 
+2015-01-29 15:30:29.908 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 15:30:29.908 12 COMMIT 
+2015-01-29 15:30:29.928 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-29 15:30:29.928 10 COMMIT 
+2015-01-29 15:30:29.938 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-29 15:30:29.938 10 COMMIT 
+2015-01-29 15:30:29.958 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 15:30:29.958 12 COMMIT 
+2015-01-29 15:30:29.968 12 delete from skidummy.eventinfo 
+2015-01-29 15:30:29.968 12 COMMIT 
+2015-01-29 15:30:29.978 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 15:30:29.978 11 COMMIT 
+2015-01-29 15:30:29.998 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (78)
+2015-01-29 15:30:29.998 11 COMMIT 
+2015-01-29 15:30:30.018 11 delete from skidummy.eventinfo where id=? (78)
+2015-01-29 15:30:30.018 11 COMMIT 
+2015-01-29 15:30:30.018 11 delete from skidummy.eventinfo 
+2015-01-29 15:30:30.018 11 COMMIT 
+2015-01-29 15:30:30.138 17 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 15:30:30.138 17 COMMIT 
+2015-01-29 15:30:30.168 17 delete from skidummy.eventinfo 
+2015-01-29 15:30:30.168 17 COMMIT 
+2015-01-29 15:30:30.188 16 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 15:30:30.188 16 COMMIT 
+2015-01-29 15:30:30.208 10 ROLLBACK 
+2015-01-29 15:30:30.208 12 ROLLBACK 
+2015-01-29 15:30:30.208 11 ROLLBACK 
+2015-01-29 15:30:30.208 13 ROLLBACK 
+2015-01-29 15:30:30.208 14 ROLLBACK 
+2015-01-29 15:30:30.208 17 ROLLBACK 
+2015-01-29 15:30:30.208 16 ROLLBACK 
+2015-01-29 15:30:30.208 15 ROLLBACK 
+2015-01-29 16:30:32.048 10 call database_version() 
+2015-01-29 16:30:32.088 10 COMMIT 
+2015-01-29 16:30:32.088 10 call database_version() 
+2015-01-29 16:30:32.088 10 COMMIT 
+2015-01-29 16:30:32.088 10 call database_version() 
+2015-01-29 16:30:32.088 10 COMMIT 
+2015-01-29 16:30:32.098 10 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-29 16:30:32.508 13 delete from skidummy.eventinfo 
+2015-01-29 16:30:32.548 13 COMMIT 
+2015-01-29 16:30:32.928 14 delete from skidummy.eventinfo 
+2015-01-29 16:30:32.928 14 COMMIT 
+2015-01-29 16:30:32.959 10 delete from skidummy.eventinfo 
+2015-01-29 16:30:32.959 10 COMMIT 
+2015-01-29 16:30:32.999 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 16:30:32.999 12 COMMIT 
+2015-01-29 16:30:33.019 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-29 16:30:33.019 10 COMMIT 
+2015-01-29 16:30:33.029 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-29 16:30:33.029 10 COMMIT 
+2015-01-29 16:30:33.039 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 16:30:33.039 12 COMMIT 
+2015-01-29 16:30:33.049 12 delete from skidummy.eventinfo 
+2015-01-29 16:30:33.049 12 COMMIT 
+2015-01-29 16:30:33.069 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 16:30:33.069 11 COMMIT 
+2015-01-29 16:30:33.079 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (83)
+2015-01-29 16:30:33.079 11 COMMIT 
+2015-01-29 16:30:33.099 11 delete from skidummy.eventinfo where id=? (83)
+2015-01-29 16:30:33.099 11 COMMIT 
+2015-01-29 16:30:33.109 11 delete from skidummy.eventinfo 
+2015-01-29 16:30:33.109 11 COMMIT 
+2015-01-29 16:30:33.219 17 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 16:30:33.219 17 COMMIT 
+2015-01-29 16:30:33.259 17 delete from skidummy.eventinfo 
+2015-01-29 16:30:33.259 17 COMMIT 
+2015-01-29 16:30:33.279 15 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 16:30:33.279 15 COMMIT 
+2015-01-29 16:30:33.289 10 ROLLBACK 
+2015-01-29 16:30:33.299 11 ROLLBACK 
+2015-01-29 16:30:33.299 12 ROLLBACK 
+2015-01-29 16:30:33.299 13 ROLLBACK 
+2015-01-29 16:30:33.299 14 ROLLBACK 
+2015-01-29 16:30:33.299 15 ROLLBACK 
+2015-01-29 16:30:33.299 16 ROLLBACK 
+2015-01-29 16:30:33.299 17 ROLLBACK 
+2015-01-29 22:45:02.792 12 call database_version() 
+2015-01-29 22:45:02.820 12 COMMIT 
+2015-01-29 22:45:02.824 12 call database_version() 
+2015-01-29 22:45:02.824 12 COMMIT 
+2015-01-29 22:45:02.824 12 call database_version() 
+2015-01-29 22:45:02.824 12 COMMIT 
+2015-01-29 22:45:02.828 12 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-29 22:45:03.242 14 delete from skidummy.eventinfo 
+2015-01-29 22:45:03.465 14 COMMIT 
+2015-01-29 22:45:03.768 13 delete from skidummy.eventinfo 
+2015-01-29 22:45:03.768 13 COMMIT 
+2015-01-29 22:45:03.801 12 delete from skidummy.eventinfo 
+2015-01-29 22:45:03.801 12 COMMIT 
+2015-01-29 22:45:03.841 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 22:45:03.841 11 COMMIT 
+2015-01-29 22:45:03.864 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-29 22:45:03.864 12 COMMIT 
+2015-01-29 22:45:03.871 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-29 22:45:03.871 12 COMMIT 
+2015-01-29 22:45:03.882 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 22:45:03.882 11 COMMIT 
+2015-01-29 22:45:03.892 11 delete from skidummy.eventinfo 
+2015-01-29 22:45:03.892 11 COMMIT 
+2015-01-29 22:45:03.906 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:45:03.906 10 COMMIT 
+2015-01-29 22:45:03.921 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (88)
+2015-01-29 22:45:03.922 10 COMMIT 
+2015-01-29 22:45:03.942 10 delete from skidummy.eventinfo where id=? (88)
+2015-01-29 22:45:03.942 10 COMMIT 
+2015-01-29 22:45:03.949 10 delete from skidummy.eventinfo 
+2015-01-29 22:45:03.949 10 COMMIT 
+2015-01-29 22:45:04.072 16 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:45:04.072 16 COMMIT 
+2015-01-29 22:45:04.104 16 delete from skidummy.eventinfo 
+2015-01-29 22:45:04.104 16 COMMIT 
+2015-01-29 22:45:04.118 15 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:45:04.118 15 COMMIT 
+2015-01-29 22:45:04.138 12 ROLLBACK 
+2015-01-29 22:45:04.139 10 ROLLBACK 
+2015-01-29 22:45:04.139 11 ROLLBACK 
+2015-01-29 22:45:04.139 14 ROLLBACK 
+2015-01-29 22:45:04.139 13 ROLLBACK 
+2015-01-29 22:45:04.139 16 ROLLBACK 
+2015-01-29 22:45:04.140 15 ROLLBACK 
+2015-01-29 22:45:04.140 17 ROLLBACK 
+2015-01-29 22:47:20.218 11 call database_version() 
+2015-01-29 22:47:20.218 11 COMMIT 
+2015-01-29 22:47:20.218 11 call database_version() 
+2015-01-29 22:47:20.218 11 COMMIT 
+2015-01-29 22:47:20.218 11 call database_version() 
+2015-01-29 22:47:20.218 11 COMMIT 
+2015-01-29 22:47:20.228 11 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-29 22:47:20.628 14 delete from skidummy.eventinfo 
+2015-01-29 22:47:20.708 14 COMMIT 
+2015-01-29 22:47:21.048 13 delete from skidummy.eventinfo 
+2015-01-29 22:47:21.048 13 COMMIT 
+2015-01-29 22:47:21.099 11 delete from skidummy.eventinfo 
+2015-01-29 22:47:21.099 11 COMMIT 
+2015-01-29 22:47:21.119 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 22:47:21.119 12 COMMIT 
+2015-01-29 22:47:21.149 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-29 22:47:21.149 11 COMMIT 
+2015-01-29 22:47:21.159 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-29 22:47:21.159 11 COMMIT 
+2015-01-29 22:47:21.169 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 22:47:21.169 12 COMMIT 
+2015-01-29 22:47:21.179 12 delete from skidummy.eventinfo 
+2015-01-29 22:47:21.179 12 COMMIT 
+2015-01-29 22:47:21.189 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:47:21.189 10 COMMIT 
+2015-01-29 22:47:21.209 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (93)
+2015-01-29 22:47:21.209 10 COMMIT 
+2015-01-29 22:47:21.229 10 delete from skidummy.eventinfo where id=? (93)
+2015-01-29 22:47:21.229 10 COMMIT 
+2015-01-29 22:47:21.239 10 delete from skidummy.eventinfo 
+2015-01-29 22:47:21.239 10 COMMIT 
+2015-01-29 22:47:21.359 16 delete from skidummy.eventinfo 
+2015-01-29 22:47:21.359 16 COMMIT 
+2015-01-29 22:47:21.379 17 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:47:21.379 17 COMMIT 
+2015-01-29 22:47:21.409 17 delete from skidummy.eventinfo 
+2015-01-29 22:47:21.419 17 COMMIT 
+2015-01-29 22:47:21.439 15 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:47:21.439 15 COMMIT 
+2015-01-29 22:47:21.449 11 ROLLBACK 
+2015-01-29 22:47:21.449 10 ROLLBACK 
+2015-01-29 22:47:21.449 12 ROLLBACK 
+2015-01-29 22:47:21.449 14 ROLLBACK 
+2015-01-29 22:47:21.449 13 ROLLBACK 
+2015-01-29 22:47:21.449 15 ROLLBACK 
+2015-01-29 22:47:21.449 17 ROLLBACK 
+2015-01-29 22:47:21.449 16 ROLLBACK 
+2015-01-29 22:47:41.204 12 call database_version() 
+2015-01-29 22:47:41.204 12 COMMIT 
+2015-01-29 22:47:41.204 12 call database_version() 
+2015-01-29 22:47:41.204 12 COMMIT 
+2015-01-29 22:47:41.204 12 call database_version() 
+2015-01-29 22:47:41.204 12 COMMIT 
+2015-01-29 22:47:41.214 12 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-29 22:47:41.644 14 delete from skidummy.eventinfo 
+2015-01-29 22:47:41.694 14 COMMIT 
+2015-01-29 22:47:42.064 13 delete from skidummy.eventinfo 
+2015-01-29 22:47:42.064 13 COMMIT 
+2015-01-29 22:47:42.096 12 delete from skidummy.eventinfo 
+2015-01-29 22:47:42.096 12 COMMIT 
+2015-01-29 22:47:42.136 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 22:47:42.136 11 COMMIT 
+2015-01-29 22:47:42.166 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-29 22:47:42.166 12 COMMIT 
+2015-01-29 22:47:42.166 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-29 22:47:42.166 12 COMMIT 
+2015-01-29 22:47:42.186 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 22:47:42.186 11 COMMIT 
+2015-01-29 22:47:42.196 11 delete from skidummy.eventinfo 
+2015-01-29 22:47:42.196 11 COMMIT 
+2015-01-29 22:47:42.216 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:47:42.216 10 COMMIT 
+2015-01-29 22:47:42.236 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (98)
+2015-01-29 22:47:42.236 10 COMMIT 
+2015-01-29 22:47:42.256 10 delete from skidummy.eventinfo where id=? (98)
+2015-01-29 22:47:42.256 10 COMMIT 
+2015-01-29 22:47:42.266 10 delete from skidummy.eventinfo 
+2015-01-29 22:47:42.266 10 COMMIT 
+2015-01-29 22:47:42.416 16 delete from skidummy.eventinfo 
+2015-01-29 22:47:42.416 16 COMMIT 
+2015-01-29 22:47:42.436 17 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:47:42.436 17 COMMIT 
+2015-01-29 22:47:42.476 17 delete from skidummy.eventinfo 
+2015-01-29 22:47:42.476 17 COMMIT 
+2015-01-29 22:47:42.496 15 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:47:42.496 15 COMMIT 
+2015-01-29 22:47:42.506 10 ROLLBACK 
+2015-01-29 22:47:42.506 11 ROLLBACK 
+2015-01-29 22:47:42.506 12 ROLLBACK 
+2015-01-29 22:47:42.506 13 ROLLBACK 
+2015-01-29 22:47:42.506 14 ROLLBACK 
+2015-01-29 22:47:42.506 15 ROLLBACK 
+2015-01-29 22:47:42.506 17 ROLLBACK 
+2015-01-29 22:47:42.506 16 ROLLBACK 
+2015-01-29 22:49:51.391 10 call database_version() 
+2015-01-29 22:49:51.391 10 COMMIT 
+2015-01-29 22:49:51.391 10 call database_version() 
+2015-01-29 22:49:51.391 10 COMMIT 
+2015-01-29 22:49:51.401 10 call database_version() 
+2015-01-29 22:49:51.401 10 COMMIT 
+2015-01-29 22:49:51.401 10 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-29 22:49:51.791 13 delete from skidummy.eventinfo 
+2015-01-29 22:49:51.862 13 COMMIT 
+2015-01-29 22:49:52.172 14 delete from skidummy.eventinfo 
+2015-01-29 22:49:52.172 14 COMMIT 
+2015-01-29 22:49:52.202 10 delete from skidummy.eventinfo 
+2015-01-29 22:49:52.202 10 COMMIT 
+2015-01-29 22:49:52.263 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 22:49:52.263 12 COMMIT 
+2015-01-29 22:49:52.293 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-29 22:49:52.293 10 COMMIT 
+2015-01-29 22:49:52.303 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-29 22:49:52.303 10 COMMIT 
+2015-01-29 22:49:52.313 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 22:49:52.313 12 COMMIT 
+2015-01-29 22:49:52.323 12 delete from skidummy.eventinfo 
+2015-01-29 22:49:52.323 12 COMMIT 
+2015-01-29 22:49:52.333 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:49:52.333 11 COMMIT 
+2015-01-29 22:49:52.353 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (103)
+2015-01-29 22:49:52.353 11 COMMIT 
+2015-01-29 22:49:52.373 11 delete from skidummy.eventinfo where id=? (103)
+2015-01-29 22:49:52.373 11 COMMIT 
+2015-01-29 22:49:52.373 11 delete from skidummy.eventinfo 
+2015-01-29 22:49:52.373 11 COMMIT 
+2015-01-29 22:49:52.493 15 delete from skidummy.eventinfo 
+2015-01-29 22:49:52.493 15 COMMIT 
+2015-01-29 22:49:52.503 17 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:49:52.503 17 COMMIT 
+2015-01-29 22:49:52.533 17 delete from skidummy.eventinfo 
+2015-01-29 22:49:52.573 17 COMMIT 
+2015-01-29 22:49:52.583 16 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:49:52.583 16 COMMIT 
+2015-01-29 22:49:52.603 10 ROLLBACK 
+2015-01-29 22:49:52.603 11 ROLLBACK 
+2015-01-29 22:49:52.603 12 ROLLBACK 
+2015-01-29 22:49:52.603 13 ROLLBACK 
+2015-01-29 22:49:52.603 14 ROLLBACK 
+2015-01-29 22:49:52.603 15 ROLLBACK 
+2015-01-29 22:49:52.603 17 ROLLBACK 
+2015-01-29 22:49:52.603 16 ROLLBACK 
+2015-01-29 22:50:49.581 11 call database_version() 
+2015-01-29 22:50:49.581 11 COMMIT 
+2015-01-29 22:50:49.581 11 call database_version() 
+2015-01-29 22:50:49.581 11 COMMIT 
+2015-01-29 22:50:49.581 11 call database_version() 
+2015-01-29 22:50:49.581 11 COMMIT 
+2015-01-29 22:50:49.591 11 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-29 22:50:49.981 13 delete from skidummy.eventinfo 
+2015-01-29 22:50:50.031 13 COMMIT 
+2015-01-29 22:50:50.371 14 delete from skidummy.eventinfo 
+2015-01-29 22:50:50.371 14 COMMIT 
+2015-01-29 22:50:50.412 11 delete from skidummy.eventinfo 
+2015-01-29 22:50:50.412 11 COMMIT 
+2015-01-29 22:50:50.442 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 22:50:50.442 10 COMMIT 
+2015-01-29 22:50:50.472 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-29 22:50:50.472 11 COMMIT 
+2015-01-29 22:50:50.472 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-29 22:50:50.472 11 COMMIT 
+2015-01-29 22:50:50.492 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 22:50:50.492 10 COMMIT 
+2015-01-29 22:50:50.502 10 delete from skidummy.eventinfo 
+2015-01-29 22:50:50.502 10 COMMIT 
+2015-01-29 22:50:50.522 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:50:50.522 12 COMMIT 
+2015-01-29 22:50:50.542 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (108)
+2015-01-29 22:50:50.542 12 COMMIT 
+2015-01-29 22:50:50.562 12 delete from skidummy.eventinfo where id=? (108)
+2015-01-29 22:50:50.562 12 COMMIT 
+2015-01-29 22:50:50.572 12 delete from skidummy.eventinfo 
+2015-01-29 22:50:50.572 12 COMMIT 
+2015-01-29 22:50:50.702 16 delete from skidummy.eventinfo 
+2015-01-29 22:50:50.702 16 COMMIT 
+2015-01-29 22:50:50.722 17 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:50:50.762 17 COMMIT 
+2015-01-29 22:50:50.792 17 delete from skidummy.eventinfo 
+2015-01-29 22:50:50.792 17 COMMIT 
+2015-01-29 22:50:50.812 15 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:50:50.812 15 COMMIT 
+2015-01-29 22:50:50.832 10 ROLLBACK 
+2015-01-29 22:50:50.832 11 ROLLBACK 
+2015-01-29 22:50:50.832 12 ROLLBACK 
+2015-01-29 22:50:50.832 14 ROLLBACK 
+2015-01-29 22:50:50.832 13 ROLLBACK 
+2015-01-29 22:50:50.832 15 ROLLBACK 
+2015-01-29 22:50:50.832 16 ROLLBACK 
+2015-01-29 22:50:50.832 17 ROLLBACK 
+2015-01-29 22:52:48.057 12 call database_version() 
+2015-01-29 22:52:48.057 12 COMMIT 
+2015-01-29 22:52:48.057 12 call database_version() 
+2015-01-29 22:52:48.057 12 COMMIT 
+2015-01-29 22:52:48.057 12 call database_version() 
+2015-01-29 22:52:48.057 12 COMMIT 
+2015-01-29 22:52:48.067 12 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-29 22:52:48.481 14 delete from skidummy.eventinfo 
+2015-01-29 22:52:48.511 14 COMMIT 
+2015-01-29 22:52:48.841 13 delete from skidummy.eventinfo 
+2015-01-29 22:52:48.841 13 COMMIT 
+2015-01-29 22:52:48.911 12 delete from skidummy.eventinfo 
+2015-01-29 22:52:48.921 12 COMMIT 
+2015-01-29 22:52:48.941 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 22:52:48.941 10 COMMIT 
+2015-01-29 22:52:48.971 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-29 22:52:48.971 12 COMMIT 
+2015-01-29 22:52:48.971 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-29 22:52:48.971 12 COMMIT 
+2015-01-29 22:52:48.991 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 22:52:48.991 10 COMMIT 
+2015-01-29 22:52:49.001 10 delete from skidummy.eventinfo 
+2015-01-29 22:52:49.001 10 COMMIT 
+2015-01-29 22:52:49.021 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:52:49.021 11 COMMIT 
+2015-01-29 22:52:49.041 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (113)
+2015-01-29 22:52:49.041 11 COMMIT 
+2015-01-29 22:52:49.061 11 delete from skidummy.eventinfo where id=? (113)
+2015-01-29 22:52:49.061 11 COMMIT 
+2015-01-29 22:52:49.071 11 delete from skidummy.eventinfo 
+2015-01-29 22:52:49.071 11 COMMIT 
+2015-01-29 22:52:49.191 16 delete from skidummy.eventinfo 
+2015-01-29 22:52:49.191 16 COMMIT 
+2015-01-29 22:52:49.201 17 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:52:49.221 17 COMMIT 
+2015-01-29 22:52:49.261 17 delete from skidummy.eventinfo 
+2015-01-29 22:52:49.261 17 COMMIT 
+2015-01-29 22:52:49.271 15 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:52:49.271 15 COMMIT 
+2015-01-29 22:52:49.291 12 ROLLBACK 
+2015-01-29 22:52:49.291 10 ROLLBACK 
+2015-01-29 22:52:49.291 11 ROLLBACK 
+2015-01-29 22:52:49.291 13 ROLLBACK 
+2015-01-29 22:52:49.291 14 ROLLBACK 
+2015-01-29 22:52:49.291 17 ROLLBACK 
+2015-01-29 22:52:49.291 15 ROLLBACK 
+2015-01-29 22:52:49.291 16 ROLLBACK 
+2015-01-29 22:53:14.187 11 call database_version() 
+2015-01-29 22:53:14.187 11 COMMIT 
+2015-01-29 22:53:14.197 11 call database_version() 
+2015-01-29 22:53:14.197 11 COMMIT 
+2015-01-29 22:53:14.197 11 call database_version() 
+2015-01-29 22:53:14.197 11 COMMIT 
+2015-01-29 22:53:14.197 11 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-29 22:53:14.577 14 delete from skidummy.eventinfo 
+2015-01-29 22:53:14.617 14 COMMIT 
+2015-01-29 22:53:14.967 13 delete from skidummy.eventinfo 
+2015-01-29 22:53:14.967 13 COMMIT 
+2015-01-29 22:53:14.997 11 delete from skidummy.eventinfo 
+2015-01-29 22:53:14.997 11 COMMIT 
+2015-01-29 22:53:15.038 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 22:53:15.038 12 COMMIT 
+2015-01-29 22:53:15.068 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-29 22:53:15.068 11 COMMIT 
+2015-01-29 22:53:15.068 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-29 22:53:15.068 11 COMMIT 
+2015-01-29 22:53:15.088 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 22:53:15.088 12 COMMIT 
+2015-01-29 22:53:15.098 12 delete from skidummy.eventinfo 
+2015-01-29 22:53:15.098 12 COMMIT 
+2015-01-29 22:53:15.118 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:53:15.118 10 COMMIT 
+2015-01-29 22:53:15.138 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (118)
+2015-01-29 22:53:15.138 10 COMMIT 
+2015-01-29 22:53:15.158 10 delete from skidummy.eventinfo where id=? (118)
+2015-01-29 22:53:15.158 10 COMMIT 
+2015-01-29 22:53:15.158 10 delete from skidummy.eventinfo 
+2015-01-29 22:53:15.158 10 COMMIT 
+2015-01-29 22:53:15.288 17 delete from skidummy.eventinfo 
+2015-01-29 22:53:15.288 17 COMMIT 
+2015-01-29 22:53:15.318 16 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:53:15.318 16 COMMIT 
+2015-01-29 22:53:15.348 16 delete from skidummy.eventinfo 
+2015-01-29 22:53:15.378 16 COMMIT 
+2015-01-29 22:53:15.388 15 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:53:15.388 15 COMMIT 
+2015-01-29 22:53:15.408 11 ROLLBACK 
+2015-01-29 22:53:15.408 12 ROLLBACK 
+2015-01-29 22:53:15.408 10 ROLLBACK 
+2015-01-29 22:53:15.408 14 ROLLBACK 
+2015-01-29 22:53:15.408 13 ROLLBACK 
+2015-01-29 22:53:15.408 16 ROLLBACK 
+2015-01-29 22:53:15.408 17 ROLLBACK 
+2015-01-29 22:53:15.408 15 ROLLBACK 
+2015-01-29 22:53:49.794 10 call database_version() 
+2015-01-29 22:53:49.794 10 COMMIT 
+2015-01-29 22:53:49.804 10 call database_version() 
+2015-01-29 22:53:49.804 10 COMMIT 
+2015-01-29 22:53:49.804 10 call database_version() 
+2015-01-29 22:53:49.804 10 COMMIT 
+2015-01-29 22:53:49.804 10 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-29 22:53:50.204 14 delete from skidummy.eventinfo 
+2015-01-29 22:53:50.254 14 COMMIT 
+2015-01-29 22:53:50.574 13 delete from skidummy.eventinfo 
+2015-01-29 22:53:50.574 13 COMMIT 
+2015-01-29 22:53:50.604 10 delete from skidummy.eventinfo 
+2015-01-29 22:53:50.604 10 COMMIT 
+2015-01-29 22:53:50.646 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 22:53:50.646 12 COMMIT 
+2015-01-29 22:53:50.666 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-29 22:53:50.666 10 COMMIT 
+2015-01-29 22:53:50.676 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-29 22:53:50.676 10 COMMIT 
+2015-01-29 22:53:50.686 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 22:53:50.686 12 COMMIT 
+2015-01-29 22:53:50.696 12 delete from skidummy.eventinfo 
+2015-01-29 22:53:50.696 12 COMMIT 
+2015-01-29 22:53:50.706 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:53:50.706 11 COMMIT 
+2015-01-29 22:53:50.726 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (123)
+2015-01-29 22:53:50.726 11 COMMIT 
+2015-01-29 22:53:50.746 11 delete from skidummy.eventinfo where id=? (123)
+2015-01-29 22:53:50.746 11 COMMIT 
+2015-01-29 22:53:50.746 11 delete from skidummy.eventinfo 
+2015-01-29 22:53:50.746 11 COMMIT 
+2015-01-29 22:53:50.886 15 delete from skidummy.eventinfo 
+2015-01-29 22:53:50.886 15 COMMIT 
+2015-01-29 22:53:50.906 16 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:53:50.906 16 COMMIT 
+2015-01-29 22:53:50.946 16 delete from skidummy.eventinfo 
+2015-01-29 22:53:50.946 16 COMMIT 
+2015-01-29 22:53:50.956 17 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:53:50.956 17 COMMIT 
+2015-01-29 22:53:50.966 11 ROLLBACK 
+2015-01-29 22:53:50.976 10 ROLLBACK 
+2015-01-29 22:53:50.976 12 ROLLBACK 
+2015-01-29 22:53:50.976 13 ROLLBACK 
+2015-01-29 22:53:50.976 14 ROLLBACK 
+2015-01-29 22:53:50.976 16 ROLLBACK 
+2015-01-29 22:53:50.976 17 ROLLBACK 
+2015-01-29 22:53:50.976 15 ROLLBACK 
+2015-01-29 22:55:58.792 10 call database_version() 
+2015-01-29 22:55:58.792 10 COMMIT 
+2015-01-29 22:55:58.802 10 call database_version() 
+2015-01-29 22:55:58.802 10 COMMIT 
+2015-01-29 22:55:58.802 10 call database_version() 
+2015-01-29 22:55:58.802 10 COMMIT 
+2015-01-29 22:55:58.802 10 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-29 22:55:59.182 14 delete from skidummy.eventinfo 
+2015-01-29 22:55:59.232 14 COMMIT 
+2015-01-29 22:55:59.582 13 delete from skidummy.eventinfo 
+2015-01-29 22:55:59.582 13 COMMIT 
+2015-01-29 22:55:59.633 10 delete from skidummy.eventinfo 
+2015-01-29 22:55:59.633 10 COMMIT 
+2015-01-29 22:55:59.663 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 22:55:59.663 12 COMMIT 
+2015-01-29 22:55:59.683 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-29 22:55:59.683 10 COMMIT 
+2015-01-29 22:55:59.693 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-29 22:55:59.693 10 COMMIT 
+2015-01-29 22:55:59.703 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 22:55:59.703 12 COMMIT 
+2015-01-29 22:55:59.713 12 delete from skidummy.eventinfo 
+2015-01-29 22:55:59.713 12 COMMIT 
+2015-01-29 22:55:59.723 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:55:59.723 11 COMMIT 
+2015-01-29 22:55:59.743 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (128)
+2015-01-29 22:55:59.743 11 COMMIT 
+2015-01-29 22:55:59.763 11 delete from skidummy.eventinfo where id=? (128)
+2015-01-29 22:55:59.763 11 COMMIT 
+2015-01-29 22:55:59.773 11 delete from skidummy.eventinfo 
+2015-01-29 22:55:59.773 11 COMMIT 
+2015-01-29 22:55:59.903 16 delete from skidummy.eventinfo 
+2015-01-29 22:55:59.903 16 COMMIT 
+2015-01-29 22:55:59.933 17 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:55:59.933 17 COMMIT 
+2015-01-29 22:55:59.963 17 delete from skidummy.eventinfo 
+2015-01-29 22:55:59.963 17 COMMIT 
+2015-01-29 22:55:59.983 15 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:56:00.043 15 COMMIT 
+2015-01-29 22:56:00.083 10 ROLLBACK 
+2015-01-29 22:56:00.083 11 ROLLBACK 
+2015-01-29 22:56:00.083 12 ROLLBACK 
+2015-01-29 22:56:00.083 14 ROLLBACK 
+2015-01-29 22:56:00.083 13 ROLLBACK 
+2015-01-29 22:56:00.083 17 ROLLBACK 
+2015-01-29 22:56:00.083 16 ROLLBACK 
+2015-01-29 22:56:00.083 15 ROLLBACK 
+2015-01-29 22:56:28.007 10 call database_version() 
+2015-01-29 22:56:28.007 10 COMMIT 
+2015-01-29 22:56:28.007 10 call database_version() 
+2015-01-29 22:56:28.007 10 COMMIT 
+2015-01-29 22:56:28.007 10 call database_version() 
+2015-01-29 22:56:28.007 10 COMMIT 
+2015-01-29 22:56:28.017 10 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-29 22:56:28.397 13 delete from skidummy.eventinfo 
+2015-01-29 22:56:28.457 13 COMMIT 
+2015-01-29 22:56:28.787 14 delete from skidummy.eventinfo 
+2015-01-29 22:56:28.787 14 COMMIT 
+2015-01-29 22:56:28.818 10 delete from skidummy.eventinfo 
+2015-01-29 22:56:28.818 10 COMMIT 
+2015-01-29 22:56:28.858 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 22:56:28.858 11 COMMIT 
+2015-01-29 22:56:28.878 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-29 22:56:28.878 10 COMMIT 
+2015-01-29 22:56:28.878 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-29 22:56:28.878 10 COMMIT 
+2015-01-29 22:56:28.898 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 22:56:28.898 11 COMMIT 
+2015-01-29 22:56:28.908 11 delete from skidummy.eventinfo 
+2015-01-29 22:56:28.908 11 COMMIT 
+2015-01-29 22:56:28.928 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:56:28.928 12 COMMIT 
+2015-01-29 22:56:28.948 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (133)
+2015-01-29 22:56:28.948 12 COMMIT 
+2015-01-29 22:56:28.968 12 delete from skidummy.eventinfo where id=? (133)
+2015-01-29 22:56:28.968 12 COMMIT 
+2015-01-29 22:56:28.968 12 delete from skidummy.eventinfo 
+2015-01-29 22:56:28.968 12 COMMIT 
+2015-01-29 22:56:29.098 15 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:56:29.098 15 COMMIT 
+2015-01-29 22:56:29.148 15 delete from skidummy.eventinfo 
+2015-01-29 22:56:29.148 15 COMMIT 
+2015-01-29 22:56:29.158 16 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:56:29.158 16 COMMIT 
+2015-01-29 22:56:29.178 11 ROLLBACK 
+2015-01-29 22:57:35.038 8 call database_version() 
+2015-01-29 22:57:35.038 8 COMMIT 
+2015-01-29 22:57:35.038 8 call database_version() 
+2015-01-29 22:57:35.038 8 COMMIT 
+2015-01-29 22:57:35.038 8 call database_version() 
+2015-01-29 22:57:35.038 8 COMMIT 
+2015-01-29 22:57:35.048 8 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-29 22:57:35.438 12 delete from skidummy.eventinfo 
+2015-01-29 22:57:35.478 12 COMMIT 
+2015-01-29 22:57:35.798 11 delete from skidummy.eventinfo 
+2015-01-29 22:57:35.798 11 COMMIT 
+2015-01-29 22:57:35.819 8 delete from skidummy.eventinfo 
+2015-01-29 22:57:35.819 8 COMMIT 
+2015-01-29 22:57:35.880 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 22:57:35.880 10 COMMIT 
+2015-01-29 22:57:35.900 8 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-29 22:57:35.900 8 COMMIT 
+2015-01-29 22:57:35.910 8 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-29 22:57:35.910 8 COMMIT 
+2015-01-29 22:57:35.920 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 22:57:35.920 10 COMMIT 
+2015-01-29 22:57:35.930 10 delete from skidummy.eventinfo 
+2015-01-29 22:57:35.930 10 COMMIT 
+2015-01-29 22:57:35.940 9 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:57:35.940 9 COMMIT 
+2015-01-29 22:57:35.960 9 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (138)
+2015-01-29 22:57:35.960 9 COMMIT 
+2015-01-29 22:57:35.980 9 delete from skidummy.eventinfo where id=? (138)
+2015-01-29 22:57:35.980 9 COMMIT 
+2015-01-29 22:57:35.980 9 delete from skidummy.eventinfo 
+2015-01-29 22:57:35.980 9 COMMIT 
+2015-01-29 22:57:36.120 14 delete from skidummy.eventinfo 
+2015-01-29 22:57:36.120 14 COMMIT 
+2015-01-29 22:57:36.150 13 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:57:36.150 13 COMMIT 
+2015-01-29 22:57:36.180 13 delete from skidummy.eventinfo 
+2015-01-29 22:57:36.180 13 COMMIT 
+2015-01-29 22:57:36.200 15 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 22:57:36.200 15 COMMIT 
+2015-01-29 22:57:36.220 8 ROLLBACK 
+2015-01-29 22:57:36.220 9 ROLLBACK 
+2015-01-29 22:57:36.220 10 ROLLBACK 
+2015-01-29 22:57:36.220 12 ROLLBACK 
+2015-01-29 22:57:36.220 11 ROLLBACK 
+2015-01-29 22:57:36.220 14 ROLLBACK 
+2015-01-29 22:57:36.220 13 ROLLBACK 
+2015-01-29 22:57:36.220 15 ROLLBACK 
+2015-01-29 23:00:26.119 10 call database_version() 
+2015-01-29 23:00:26.119 10 COMMIT 
+2015-01-29 23:00:26.119 10 call database_version() 
+2015-01-29 23:00:26.119 10 COMMIT 
+2015-01-29 23:00:26.119 10 call database_version() 
+2015-01-29 23:00:26.119 10 COMMIT 
+2015-01-29 23:00:26.129 10 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-29 23:00:26.509 14 delete from skidummy.eventinfo 
+2015-01-29 23:00:26.559 14 COMMIT 
+2015-01-29 23:00:26.899 13 delete from skidummy.eventinfo 
+2015-01-29 23:00:26.899 13 COMMIT 
+2015-01-29 23:00:26.930 10 delete from skidummy.eventinfo 
+2015-01-29 23:00:26.930 10 COMMIT 
+2015-01-29 23:00:26.980 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 23:00:26.980 12 COMMIT 
+2015-01-29 23:00:27.000 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-29 23:00:27.000 10 COMMIT 
+2015-01-29 23:00:27.010 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-29 23:00:27.010 10 COMMIT 
+2015-01-29 23:00:27.020 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 23:00:27.020 12 COMMIT 
+2015-01-29 23:00:27.030 12 delete from skidummy.eventinfo 
+2015-01-29 23:00:27.030 12 COMMIT 
+2015-01-29 23:00:27.040 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:00:27.040 11 COMMIT 
+2015-01-29 23:00:27.060 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (143)
+2015-01-29 23:00:27.060 11 COMMIT 
+2015-01-29 23:00:27.080 11 delete from skidummy.eventinfo where id=? (143)
+2015-01-29 23:00:27.080 11 COMMIT 
+2015-01-29 23:00:27.080 11 delete from skidummy.eventinfo 
+2015-01-29 23:00:27.080 11 COMMIT 
+2015-01-29 23:00:27.220 16 delete from skidummy.eventinfo 
+2015-01-29 23:00:27.220 16 COMMIT 
+2015-01-29 23:00:27.240 17 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:00:27.240 17 COMMIT 
+2015-01-29 23:00:27.280 17 delete from skidummy.eventinfo 
+2015-01-29 23:00:27.280 17 COMMIT 
+2015-01-29 23:00:27.300 15 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:00:27.360 15 COMMIT 
+2015-01-29 23:00:27.390 12 ROLLBACK 
+2015-01-29 23:00:27.400 11 ROLLBACK 
+2015-01-29 23:00:27.400 10 ROLLBACK 
+2015-01-29 23:00:27.400 13 ROLLBACK 
+2015-01-29 23:00:27.400 14 ROLLBACK 
+2015-01-29 23:00:27.400 17 ROLLBACK 
+2015-01-29 23:00:27.400 16 ROLLBACK 
+2015-01-29 23:00:27.400 15 ROLLBACK 
+2015-01-29 23:00:47.934 11 call database_version() 
+2015-01-29 23:00:47.934 11 COMMIT 
+2015-01-29 23:00:47.944 11 call database_version() 
+2015-01-29 23:00:47.944 11 COMMIT 
+2015-01-29 23:00:47.944 11 call database_version() 
+2015-01-29 23:00:47.944 11 COMMIT 
+2015-01-29 23:00:47.944 11 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-29 23:00:48.354 13 delete from skidummy.eventinfo 
+2015-01-29 23:00:48.404 13 COMMIT 
+2015-01-29 23:00:48.734 14 delete from skidummy.eventinfo 
+2015-01-29 23:00:48.734 14 COMMIT 
+2015-01-29 23:00:48.765 11 delete from skidummy.eventinfo 
+2015-01-29 23:00:48.765 11 COMMIT 
+2015-01-29 23:00:48.825 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 23:00:48.825 10 COMMIT 
+2015-01-29 23:00:48.845 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-29 23:00:48.845 11 COMMIT 
+2015-01-29 23:00:48.855 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-29 23:00:48.855 11 COMMIT 
+2015-01-29 23:00:48.865 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 23:00:48.865 10 COMMIT 
+2015-01-29 23:00:48.875 10 delete from skidummy.eventinfo 
+2015-01-29 23:00:48.875 10 COMMIT 
+2015-01-29 23:00:48.895 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:00:48.895 12 COMMIT 
+2015-01-29 23:00:48.915 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (148)
+2015-01-29 23:00:48.915 12 COMMIT 
+2015-01-29 23:00:48.935 12 delete from skidummy.eventinfo where id=? (148)
+2015-01-29 23:00:48.935 12 COMMIT 
+2015-01-29 23:00:48.935 12 delete from skidummy.eventinfo 
+2015-01-29 23:00:48.935 12 COMMIT 
+2015-01-29 23:00:49.065 15 delete from skidummy.eventinfo 
+2015-01-29 23:00:49.075 15 COMMIT 
+2015-01-29 23:00:49.105 16 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:00:49.105 16 COMMIT 
+2015-01-29 23:00:49.135 16 delete from skidummy.eventinfo 
+2015-01-29 23:00:49.135 16 COMMIT 
+2015-01-29 23:00:49.155 17 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:00:49.155 17 COMMIT 
+2015-01-29 23:00:49.175 12 ROLLBACK 
+2015-01-29 23:00:49.175 10 ROLLBACK 
+2015-01-29 23:00:49.175 11 ROLLBACK 
+2015-01-29 23:00:49.175 14 ROLLBACK 
+2015-01-29 23:00:49.175 13 ROLLBACK 
+2015-01-29 23:00:49.175 17 ROLLBACK 
+2015-01-29 23:00:49.175 15 ROLLBACK 
+2015-01-29 23:00:49.175 16 ROLLBACK 
+2015-01-29 23:03:58.531 12 call database_version() 
+2015-01-29 23:03:58.531 12 COMMIT 
+2015-01-29 23:03:58.541 12 call database_version() 
+2015-01-29 23:03:58.541 12 COMMIT 
+2015-01-29 23:03:58.541 12 call database_version() 
+2015-01-29 23:03:58.541 12 COMMIT 
+2015-01-29 23:03:58.541 12 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-29 23:03:58.961 13 delete from skidummy.eventinfo 
+2015-01-29 23:03:59.011 13 COMMIT 
+2015-01-29 23:03:59.361 14 delete from skidummy.eventinfo 
+2015-01-29 23:03:59.361 14 COMMIT 
+2015-01-29 23:03:59.406 12 delete from skidummy.eventinfo 
+2015-01-29 23:03:59.406 12 COMMIT 
+2015-01-29 23:03:59.436 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 23:03:59.436 11 COMMIT 
+2015-01-29 23:03:59.456 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-29 23:03:59.456 12 COMMIT 
+2015-01-29 23:03:59.456 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-29 23:03:59.466 12 COMMIT 
+2015-01-29 23:03:59.476 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 23:03:59.476 11 COMMIT 
+2015-01-29 23:03:59.486 11 delete from skidummy.eventinfo 
+2015-01-29 23:03:59.486 11 COMMIT 
+2015-01-29 23:03:59.506 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:03:59.506 10 COMMIT 
+2015-01-29 23:03:59.526 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (153)
+2015-01-29 23:03:59.526 10 COMMIT 
+2015-01-29 23:03:59.546 10 delete from skidummy.eventinfo where id=? (153)
+2015-01-29 23:03:59.546 10 COMMIT 
+2015-01-29 23:03:59.556 10 delete from skidummy.eventinfo 
+2015-01-29 23:03:59.556 10 COMMIT 
+2015-01-29 23:03:59.676 15 delete from skidummy.eventinfo 
+2015-01-29 23:03:59.676 15 COMMIT 
+2015-01-29 23:03:59.696 17 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:03:59.696 17 COMMIT 
+2015-01-29 23:03:59.726 17 delete from skidummy.eventinfo 
+2015-01-29 23:03:59.726 17 COMMIT 
+2015-01-29 23:03:59.746 16 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:03:59.766 16 COMMIT 
+2015-01-29 23:03:59.786 11 ROLLBACK 
+2015-01-29 23:03:59.786 12 ROLLBACK 
+2015-01-29 23:03:59.786 10 ROLLBACK 
+2015-01-29 23:03:59.786 13 ROLLBACK 
+2015-01-29 23:03:59.786 14 ROLLBACK 
+2015-01-29 23:03:59.786 17 ROLLBACK 
+2015-01-29 23:03:59.786 15 ROLLBACK 
+2015-01-29 23:03:59.786 16 ROLLBACK 
+2015-01-29 23:11:01.206 10 call database_version() 
+2015-01-29 23:11:01.206 10 COMMIT 
+2015-01-29 23:11:01.206 10 call database_version() 
+2015-01-29 23:11:01.206 10 COMMIT 
+2015-01-29 23:11:01.216 10 call database_version() 
+2015-01-29 23:11:01.216 10 COMMIT 
+2015-01-29 23:11:01.216 10 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-29 23:11:01.606 13 delete from skidummy.eventinfo 
+2015-01-29 23:11:01.686 13 COMMIT 
+2015-01-29 23:11:02.016 14 delete from skidummy.eventinfo 
+2015-01-29 23:11:02.016 14 COMMIT 
+2015-01-29 23:11:02.047 10 delete from skidummy.eventinfo 
+2015-01-29 23:11:02.047 10 COMMIT 
+2015-01-29 23:11:02.097 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 23:11:02.097 12 COMMIT 
+2015-01-29 23:11:02.117 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-29 23:11:02.117 10 COMMIT 
+2015-01-29 23:11:02.127 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-29 23:11:02.127 10 COMMIT 
+2015-01-29 23:11:02.137 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 23:11:02.137 12 COMMIT 
+2015-01-29 23:11:02.147 12 delete from skidummy.eventinfo 
+2015-01-29 23:11:02.147 12 COMMIT 
+2015-01-29 23:11:02.167 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:11:02.167 11 COMMIT 
+2015-01-29 23:11:02.177 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (158)
+2015-01-29 23:11:02.177 11 COMMIT 
+2015-01-29 23:11:02.197 11 delete from skidummy.eventinfo where id=? (158)
+2015-01-29 23:11:02.197 11 COMMIT 
+2015-01-29 23:11:02.207 11 delete from skidummy.eventinfo 
+2015-01-29 23:11:02.207 11 COMMIT 
+2015-01-29 23:11:02.327 16 delete from skidummy.eventinfo 
+2015-01-29 23:11:02.327 16 COMMIT 
+2015-01-29 23:11:02.337 17 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:11:02.347 17 COMMIT 
+2015-01-29 23:11:02.377 17 delete from skidummy.eventinfo 
+2015-01-29 23:11:02.377 17 COMMIT 
+2015-01-29 23:11:02.397 15 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:11:02.397 15 COMMIT 
+2015-01-29 23:11:02.407 11 ROLLBACK 
+2015-01-29 23:11:02.407 10 ROLLBACK 
+2015-01-29 23:11:02.407 12 ROLLBACK 
+2015-01-29 23:11:02.407 13 ROLLBACK 
+2015-01-29 23:11:02.407 14 ROLLBACK 
+2015-01-29 23:11:02.407 16 ROLLBACK 
+2015-01-29 23:11:02.407 17 ROLLBACK 
+2015-01-29 23:11:02.407 15 ROLLBACK 
+2015-01-29 23:20:22.742 11 call database_version() 
+2015-01-29 23:20:22.742 11 COMMIT 
+2015-01-29 23:20:22.752 11 call database_version() 
+2015-01-29 23:20:22.752 11 COMMIT 
+2015-01-29 23:20:22.752 11 call database_version() 
+2015-01-29 23:20:22.752 11 COMMIT 
+2015-01-29 23:20:22.762 11 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-29 23:20:23.182 11 delete from skidummy.eventinfo 
+2015-01-29 23:20:23.352 11 COMMIT 
+2015-01-29 23:20:23.672 13 delete from skidummy.eventinfo 
+2015-01-29 23:20:23.672 13 COMMIT 
+2015-01-29 23:20:23.704 14 delete from skidummy.eventinfo 
+2015-01-29 23:20:23.704 14 COMMIT 
+2015-01-29 23:20:23.744 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 23:20:23.744 12 COMMIT 
+2015-01-29 23:20:23.764 14 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-29 23:20:23.764 14 COMMIT 
+2015-01-29 23:20:23.774 14 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-29 23:20:23.774 14 COMMIT 
+2015-01-29 23:20:23.784 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 23:20:23.784 12 COMMIT 
+2015-01-29 23:20:23.794 12 delete from skidummy.eventinfo 
+2015-01-29 23:20:23.794 12 COMMIT 
+2015-01-29 23:20:23.914 16 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:20:23.944 16 COMMIT 
+2015-01-29 23:20:23.974 16 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (163)
+2015-01-29 23:20:23.974 16 COMMIT 
+2015-01-29 23:20:23.984 16 delete from skidummy.eventinfo where id=? (163)
+2015-01-29 23:20:23.984 16 COMMIT 
+2015-01-29 23:20:23.994 16 delete from skidummy.eventinfo 
+2015-01-29 23:20:23.994 16 COMMIT 
+2015-01-29 23:20:24.014 17 delete from skidummy.eventinfo 
+2015-01-29 23:20:24.014 17 COMMIT 
+2015-01-29 23:20:24.034 15 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:20:24.034 15 COMMIT 
+2015-01-29 23:20:24.074 15 delete from skidummy.eventinfo 
+2015-01-29 23:20:24.074 15 COMMIT 
+2015-01-29 23:20:24.184 18 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:20:24.184 18 COMMIT 
+2015-01-29 23:20:24.204 10 ROLLBACK 
+2015-01-29 23:20:24.204 12 ROLLBACK 
+2015-01-29 23:20:24.204 11 ROLLBACK 
+2015-01-29 23:20:24.204 13 ROLLBACK 
+2015-01-29 23:20:24.204 14 ROLLBACK 
+2015-01-29 23:20:24.204 15 ROLLBACK 
+2015-01-29 23:20:24.204 16 ROLLBACK 
+2015-01-29 23:20:24.204 17 ROLLBACK 
+2015-01-29 23:20:24.204 18 ROLLBACK 
+2015-01-29 23:20:24.204 19 ROLLBACK 
+2015-01-29 23:23:04.044 12 call database_version() 
+2015-01-29 23:23:04.044 12 COMMIT 
+2015-01-29 23:23:04.054 12 call database_version() 
+2015-01-29 23:23:04.054 12 COMMIT 
+2015-01-29 23:23:04.054 12 call database_version() 
+2015-01-29 23:23:04.054 12 COMMIT 
+2015-01-29 23:23:04.054 12 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-29 23:23:04.444 16 delete from skidummy.eventinfo 
+2015-01-29 23:23:04.514 16 COMMIT 
+2015-01-29 23:23:04.854 15 delete from skidummy.eventinfo 
+2015-01-29 23:23:04.854 15 COMMIT 
+2015-01-29 23:23:04.876 12 delete from skidummy.eventinfo 
+2015-01-29 23:23:04.876 12 COMMIT 
+2015-01-29 23:23:04.936 13 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 23:23:04.936 13 COMMIT 
+2015-01-29 23:23:04.956 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-29 23:23:04.956 12 COMMIT 
+2015-01-29 23:23:04.966 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-29 23:23:04.966 12 COMMIT 
+2015-01-29 23:23:04.986 13 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 23:23:04.986 13 COMMIT 
+2015-01-29 23:23:04.996 13 delete from skidummy.eventinfo 
+2015-01-29 23:23:04.996 13 COMMIT 
+2015-01-29 23:23:05.006 14 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:23:05.006 14 COMMIT 
+2015-01-29 23:23:05.026 14 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (168)
+2015-01-29 23:23:05.026 14 COMMIT 
+2015-01-29 23:23:05.046 14 delete from skidummy.eventinfo where id=? (168)
+2015-01-29 23:23:05.046 14 COMMIT 
+2015-01-29 23:23:05.056 14 delete from skidummy.eventinfo 
+2015-01-29 23:23:05.056 14 COMMIT 
+2015-01-29 23:23:05.176 18 delete from skidummy.eventinfo 
+2015-01-29 23:23:05.176 18 COMMIT 
+2015-01-29 23:23:05.206 19 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:23:05.236 19 COMMIT 
+2015-01-29 23:23:05.266 19 delete from skidummy.eventinfo 
+2015-01-29 23:23:05.266 19 COMMIT 
+2015-01-29 23:23:05.286 17 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:23:05.286 17 COMMIT 
+2015-01-29 23:23:05.296 13 ROLLBACK 
+2015-01-29 23:23:05.306 12 ROLLBACK 
+2015-01-29 23:23:05.306 14 ROLLBACK 
+2015-01-29 23:23:05.306 16 ROLLBACK 
+2015-01-29 23:23:05.306 15 ROLLBACK 
+2015-01-29 23:23:05.306 18 ROLLBACK 
+2015-01-29 23:23:05.306 17 ROLLBACK 
+2015-01-29 23:23:05.306 19 ROLLBACK 
+2015-01-29 23:28:03.152 12 call database_version() 
+2015-01-29 23:28:03.152 12 COMMIT 
+2015-01-29 23:28:03.157 12 call database_version() 
+2015-01-29 23:28:03.158 12 COMMIT 
+2015-01-29 23:28:03.158 12 call database_version() 
+2015-01-29 23:28:03.158 12 COMMIT 
+2015-01-29 23:28:03.163 12 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-29 23:28:03.570 13 delete from skidummy.eventinfo 
+2015-01-29 23:28:03.622 13 COMMIT 
+2015-01-29 23:28:03.957 14 delete from skidummy.eventinfo 
+2015-01-29 23:28:03.957 14 COMMIT 
+2015-01-29 23:28:03.988 12 delete from skidummy.eventinfo 
+2015-01-29 23:28:03.989 12 COMMIT 
+2015-01-29 23:28:04.032 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 23:28:04.033 11 COMMIT 
+2015-01-29 23:28:04.060 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-29 23:28:04.061 12 COMMIT 
+2015-01-29 23:28:04.066 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-29 23:28:04.067 12 COMMIT 
+2015-01-29 23:28:04.079 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 23:28:04.079 11 COMMIT 
+2015-01-29 23:28:04.089 11 delete from skidummy.eventinfo 
+2015-01-29 23:28:04.089 11 COMMIT 
+2015-01-29 23:28:04.103 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:28:04.103 10 COMMIT 
+2015-01-29 23:28:04.121 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (173)
+2015-01-29 23:28:04.121 10 COMMIT 
+2015-01-29 23:28:04.136 10 delete from skidummy.eventinfo where id=? (173)
+2015-01-29 23:28:04.136 10 COMMIT 
+2015-01-29 23:28:04.143 10 delete from skidummy.eventinfo 
+2015-01-29 23:28:04.143 10 COMMIT 
+2015-01-29 23:28:04.273 15 delete from skidummy.eventinfo 
+2015-01-29 23:28:04.273 15 COMMIT 
+2015-01-29 23:28:04.294 17 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:28:04.294 17 COMMIT 
+2015-01-29 23:28:04.325 17 delete from skidummy.eventinfo 
+2015-01-29 23:28:04.325 17 COMMIT 
+2015-01-29 23:28:04.339 16 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:28:04.339 16 COMMIT 
+2015-01-29 23:28:04.355 11 ROLLBACK 
+2015-01-29 23:28:04.355 10 ROLLBACK 
+2015-01-29 23:28:04.355 12 ROLLBACK 
+2015-01-29 23:28:04.356 14 ROLLBACK 
+2015-01-29 23:28:04.356 13 ROLLBACK 
+2015-01-29 23:28:04.356 16 ROLLBACK 
+2015-01-29 23:28:04.356 17 ROLLBACK 
+2015-01-29 23:28:04.356 15 ROLLBACK 
+2015-01-29 23:33:29.400 11 call database_version() 
+2015-01-29 23:33:29.401 11 COMMIT 
+2015-01-29 23:33:29.405 11 call database_version() 
+2015-01-29 23:33:29.405 11 COMMIT 
+2015-01-29 23:33:29.406 11 call database_version() 
+2015-01-29 23:33:29.406 11 COMMIT 
+2015-01-29 23:33:29.411 11 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-29 23:33:29.815 14 delete from skidummy.eventinfo 
+2015-01-29 23:33:29.867 14 COMMIT 
+2015-01-29 23:33:30.212 13 delete from skidummy.eventinfo 
+2015-01-29 23:33:30.212 13 COMMIT 
+2015-01-29 23:33:30.244 11 delete from skidummy.eventinfo 
+2015-01-29 23:33:30.244 11 COMMIT 
+2015-01-29 23:33:30.283 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 23:33:30.283 10 COMMIT 
+2015-01-29 23:33:30.307 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-29 23:33:30.307 11 COMMIT 
+2015-01-29 23:33:30.313 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-29 23:33:30.313 11 COMMIT 
+2015-01-29 23:33:30.326 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 23:33:30.326 10 COMMIT 
+2015-01-29 23:33:30.336 10 delete from skidummy.eventinfo 
+2015-01-29 23:33:30.336 10 COMMIT 
+2015-01-29 23:33:30.350 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:33:30.350 12 COMMIT 
+2015-01-29 23:33:30.365 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (178)
+2015-01-29 23:33:30.365 12 COMMIT 
+2015-01-29 23:33:30.380 12 delete from skidummy.eventinfo where id=? (178)
+2015-01-29 23:33:30.380 12 COMMIT 
+2015-01-29 23:33:30.387 12 delete from skidummy.eventinfo 
+2015-01-29 23:33:30.387 12 COMMIT 
+2015-01-29 23:33:30.513 17 delete from skidummy.eventinfo 
+2015-01-29 23:33:30.513 17 COMMIT 
+2015-01-29 23:33:30.527 15 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:33:30.532 15 COMMIT 
+2015-01-29 23:33:30.570 15 delete from skidummy.eventinfo 
+2015-01-29 23:33:30.571 15 COMMIT 
+2015-01-29 23:33:30.586 16 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:33:30.586 16 COMMIT 
+2015-01-29 23:33:30.603 11 ROLLBACK 
+2015-01-29 23:33:30.603 10 ROLLBACK 
+2015-01-29 23:33:30.603 12 ROLLBACK 
+2015-01-29 23:33:30.603 13 ROLLBACK 
+2015-01-29 23:33:30.603 14 ROLLBACK 
+2015-01-29 23:33:30.604 17 ROLLBACK 
+2015-01-29 23:33:30.604 15 ROLLBACK 
+2015-01-29 23:33:30.604 16 ROLLBACK 
+2015-01-29 23:48:46.464 11 call database_version() 
+2015-01-29 23:48:46.464 11 COMMIT 
+2015-01-29 23:48:46.464 11 call database_version() 
+2015-01-29 23:48:46.464 11 COMMIT 
+2015-01-29 23:48:46.474 11 call database_version() 
+2015-01-29 23:48:46.474 11 COMMIT 
+2015-01-29 23:48:46.474 11 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-29 23:48:46.874 14 delete from skidummy.eventinfo 
+2015-01-29 23:48:46.924 14 COMMIT 
+2015-01-29 23:48:47.264 13 delete from skidummy.eventinfo 
+2015-01-29 23:48:47.264 13 COMMIT 
+2015-01-29 23:48:47.296 11 delete from skidummy.eventinfo 
+2015-01-29 23:48:47.296 11 COMMIT 
+2015-01-29 23:48:47.356 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 23:48:47.356 10 COMMIT 
+2015-01-29 23:48:47.376 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-29 23:48:47.376 11 COMMIT 
+2015-01-29 23:48:47.376 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-29 23:48:47.376 11 COMMIT 
+2015-01-29 23:48:47.396 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-29')
+2015-01-29 23:48:47.396 10 COMMIT 
+2015-01-29 23:48:47.406 10 delete from skidummy.eventinfo 
+2015-01-29 23:48:47.406 10 COMMIT 
+2015-01-29 23:48:47.426 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:48:47.426 12 COMMIT 
+2015-01-29 23:48:47.436 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (183)
+2015-01-29 23:48:47.436 12 COMMIT 
+2015-01-29 23:48:47.456 12 delete from skidummy.eventinfo where id=? (183)
+2015-01-29 23:48:47.456 12 COMMIT 
+2015-01-29 23:48:47.456 12 delete from skidummy.eventinfo 
+2015-01-29 23:48:47.456 12 COMMIT 
+2015-01-29 23:48:47.586 16 delete from skidummy.eventinfo 
+2015-01-29 23:48:47.586 16 COMMIT 
+2015-01-29 23:48:47.606 15 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:48:47.606 15 COMMIT 
+2015-01-29 23:48:47.636 15 delete from skidummy.eventinfo 
+2015-01-29 23:48:47.636 15 COMMIT 
+2015-01-29 23:48:47.656 17 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-30','Hack')
+2015-01-29 23:48:47.656 17 COMMIT 
+2015-01-29 23:48:47.666 12 ROLLBACK 
+2015-01-29 23:48:47.666 11 ROLLBACK 
+2015-01-29 23:48:47.676 10 ROLLBACK 
+2015-01-29 23:48:47.676 14 ROLLBACK 
+2015-01-29 23:48:47.676 13 ROLLBACK 
+2015-01-29 23:48:47.676 16 ROLLBACK 
+2015-01-30 09:01:41.649 9 call database_version() 
+2015-01-30 09:01:41.727 9 COMMIT 
+2015-01-30 09:01:41.727 9 call database_version() 
+2015-01-30 09:01:41.727 9 COMMIT 
+2015-01-30 09:01:41.727 9 call database_version() 
+2015-01-30 09:01:41.727 9 COMMIT 
+2015-01-30 09:01:41.743 9 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-30 09:01:42.117 9 delete from skidummy.eventinfo 
+2015-01-30 09:01:42.164 9 COMMIT 
+2015-01-30 09:01:42.492 13 delete from skidummy.eventinfo 
+2015-01-30 09:01:42.492 13 COMMIT 
+2015-01-30 09:01:42.540 12 delete from skidummy.eventinfo 
+2015-01-30 09:01:42.540 12 COMMIT 
+2015-01-30 09:01:42.571 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-30')
+2015-01-30 09:01:42.571 11 COMMIT 
+2015-01-30 09:01:42.586 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-30 09:01:42.586 12 COMMIT 
+2015-01-30 09:01:42.602 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-30 09:01:42.602 12 COMMIT 
+2015-01-30 09:01:42.618 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-30')
+2015-01-30 09:01:42.618 11 COMMIT 
+2015-01-30 09:01:42.633 11 delete from skidummy.eventinfo 
+2015-01-30 09:01:42.633 11 COMMIT 
+2015-01-30 09:01:42.649 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-31','Hack')
+2015-01-30 09:01:42.649 10 COMMIT 
+2015-01-30 09:01:42.664 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (188)
+2015-01-30 09:01:42.664 10 COMMIT 
+2015-01-30 09:01:42.680 10 delete from skidummy.eventinfo where id=? (188)
+2015-01-30 09:01:42.680 10 COMMIT 
+2015-01-30 09:01:42.680 10 delete from skidummy.eventinfo 
+2015-01-30 09:01:42.680 10 COMMIT 
+2015-01-30 09:01:42.820 14 delete from skidummy.eventinfo 
+2015-01-30 09:01:42.820 14 COMMIT 
+2015-01-30 09:01:42.836 16 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-31','Hack')
+2015-01-30 09:01:42.836 16 COMMIT 
+2015-01-30 09:01:42.883 16 delete from skidummy.eventinfo 
+2015-01-30 09:01:42.883 16 COMMIT 
+2015-01-30 09:01:42.898 15 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-31','Hack')
+2015-01-30 09:01:42.898 15 COMMIT 
+2015-01-30 09:01:42.914 11 ROLLBACK 
+2015-01-30 09:01:42.914 10 ROLLBACK 
+2015-01-30 09:01:42.914 9 ROLLBACK 
+2015-01-30 09:01:42.914 13 ROLLBACK 
+2015-01-30 09:01:42.914 12 ROLLBACK 
+2015-01-30 09:01:42.914 14 ROLLBACK 
+2015-01-30 09:01:42.914 16 ROLLBACK 
+2015-01-30 09:01:42.914 15 ROLLBACK 
+2015-01-30 09:03:42.680 11 call database_version() 
+2015-01-30 09:03:42.680 11 COMMIT 
+2015-01-30 09:03:42.680 11 call database_version() 
+2015-01-30 09:03:42.680 11 COMMIT 
+2015-01-30 09:03:42.680 11 call database_version() 
+2015-01-30 09:03:42.680 11 COMMIT 
+2015-01-30 09:03:42.680 11 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-30 09:03:43.055 14 delete from skidummy.eventinfo 
+2015-01-30 09:03:43.149 14 COMMIT 
+2015-01-30 09:03:43.445 13 delete from skidummy.eventinfo 
+2015-01-30 09:03:43.445 13 COMMIT 
+2015-01-30 09:03:43.477 11 delete from skidummy.eventinfo 
+2015-01-30 09:03:43.477 11 COMMIT 
+2015-01-30 09:03:43.509 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-30')
+2015-01-30 09:03:43.509 12 COMMIT 
+2015-01-30 09:03:43.540 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-30 09:03:43.540 11 COMMIT 
+2015-01-30 09:03:43.540 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-30 09:03:43.540 11 COMMIT 
+2015-01-30 09:03:43.555 12 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-30')
+2015-01-30 09:03:43.555 12 COMMIT 
+2015-01-30 09:03:43.555 12 delete from skidummy.eventinfo 
+2015-01-30 09:03:43.571 12 COMMIT 
+2015-01-30 09:03:43.571 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-31','Hack')
+2015-01-30 09:03:43.587 10 COMMIT 
+2015-01-30 09:03:43.602 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (193)
+2015-01-30 09:03:43.602 10 COMMIT 
+2015-01-30 09:03:43.618 10 delete from skidummy.eventinfo where id=? (193)
+2015-01-30 09:03:43.618 10 COMMIT 
+2015-01-30 09:03:43.618 10 delete from skidummy.eventinfo 
+2015-01-30 09:03:43.618 10 COMMIT 
+2015-01-30 09:03:43.758 17 delete from skidummy.eventinfo 
+2015-01-30 09:03:43.758 17 COMMIT 
+2015-01-30 09:03:43.789 15 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-31','Hack')
+2015-01-30 09:03:43.789 15 COMMIT 
+2015-01-30 09:03:43.836 15 delete from skidummy.eventinfo 
+2015-01-30 09:03:43.836 15 COMMIT 
+2015-01-30 09:03:43.852 16 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-31','Hack')
+2015-01-30 09:03:43.852 16 COMMIT 
+2015-01-30 09:03:43.867 10 ROLLBACK 
+2015-01-30 09:03:43.867 11 ROLLBACK 
+2015-01-30 09:03:43.867 12 ROLLBACK 
+2015-01-30 09:03:43.867 13 ROLLBACK 
+2015-01-30 09:03:43.867 14 ROLLBACK 
+2015-01-30 09:03:43.867 17 ROLLBACK 
+2015-01-30 09:03:43.867 15 ROLLBACK 
+2015-01-30 09:03:43.867 16 ROLLBACK 
+2015-01-30 09:05:44.269 12 call database_version() 
+2015-01-30 09:05:44.269 12 COMMIT 
+2015-01-30 09:05:44.275 12 call database_version() 
+2015-01-30 09:05:44.275 12 COMMIT 
+2015-01-30 09:05:44.276 12 call database_version() 
+2015-01-30 09:05:44.276 12 COMMIT 
+2015-01-30 09:05:44.280 12 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-30 09:05:44.677 14 delete from skidummy.eventinfo 
+2015-01-30 09:05:44.786 14 COMMIT 
+2015-01-30 09:05:45.141 13 delete from skidummy.eventinfo 
+2015-01-30 09:05:45.141 13 COMMIT 
+2015-01-30 09:05:45.173 12 delete from skidummy.eventinfo 
+2015-01-30 09:05:45.173 12 COMMIT 
+2015-01-30 09:05:45.219 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-30')
+2015-01-30 09:05:45.219 11 COMMIT 
+2015-01-30 09:05:45.244 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-30 09:05:45.245 12 COMMIT 
+2015-01-30 09:05:45.250 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-30 09:05:45.250 12 COMMIT 
+2015-01-30 09:05:45.261 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-30')
+2015-01-30 09:05:45.261 11 COMMIT 
+2015-01-30 09:05:45.271 11 delete from skidummy.eventinfo 
+2015-01-30 09:05:45.272 11 COMMIT 
+2015-01-30 09:05:45.286 10 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-31','Hack')
+2015-01-30 09:05:45.286 10 COMMIT 
+2015-01-30 09:05:45.302 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (198)
+2015-01-30 09:05:45.303 10 COMMIT 
+2015-01-30 09:05:45.321 10 delete from skidummy.eventinfo where id=? (198)
+2015-01-30 09:05:45.321 10 COMMIT 
+2015-01-30 09:05:45.328 10 delete from skidummy.eventinfo 
+2015-01-30 09:05:45.328 10 COMMIT 
+2015-01-30 09:05:45.462 16 delete from skidummy.eventinfo 
+2015-01-30 09:05:45.462 16 COMMIT 
+2015-01-30 09:05:45.484 17 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-31','Hack')
+2015-01-30 09:05:45.484 17 COMMIT 
+2015-01-30 09:05:45.516 17 delete from skidummy.eventinfo 
+2015-01-30 09:05:45.517 17 COMMIT 
+2015-01-30 09:05:45.531 15 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-31','Hack')
+2015-01-30 09:05:45.531 15 COMMIT 
+2015-01-30 09:05:45.547 11 ROLLBACK 
+2015-01-30 09:05:45.547 12 ROLLBACK 
+2015-01-30 09:05:45.547 10 ROLLBACK 
+2015-01-30 09:05:45.547 13 ROLLBACK 
+2015-01-30 09:05:45.548 14 ROLLBACK 
+2015-01-30 09:05:45.548 16 ROLLBACK 
+2015-01-30 09:05:45.548 15 ROLLBACK 
+2015-01-30 09:05:45.548 17 ROLLBACK 
+2015-01-30 09:07:03.362 12 call database_version() 
+2015-01-30 09:07:03.362 12 COMMIT 
+2015-01-30 09:07:03.372 12 call database_version() 
+2015-01-30 09:07:03.372 12 COMMIT 
+2015-01-30 09:07:03.372 12 call database_version() 
+2015-01-30 09:07:03.372 12 COMMIT 
+2015-01-30 09:07:03.372 12 SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TYPEINFO 
+2015-01-30 09:07:03.752 14 delete from skidummy.eventinfo 
+2015-01-30 09:07:03.812 14 COMMIT 
+2015-01-30 09:07:04.182 13 delete from skidummy.eventinfo 
+2015-01-30 09:07:04.182 13 COMMIT 
+2015-01-30 09:07:04.253 12 delete from skidummy.eventinfo 
+2015-01-30 09:07:04.253 12 COMMIT 
+2015-01-30 09:07:04.283 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-30')
+2015-01-30 09:07:04.283 10 COMMIT 
+2015-01-30 09:07:04.313 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bill','','','','',NULL,'')
+2015-01-30 09:07:04.313 12 COMMIT 
+2015-01-30 09:07:04.323 12 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('','Bob','','','','',NULL,'')
+2015-01-30 09:07:04.323 12 COMMIT 
+2015-01-30 09:07:04.333 10 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.skiday>=? (DATE'2015-01-30')
+2015-01-30 09:07:04.333 10 COMMIT 
+2015-01-30 09:07:04.343 10 delete from skidummy.eventinfo 
+2015-01-30 09:07:04.343 10 COMMIT 
+2015-01-30 09:07:04.363 11 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-31','Hack')
+2015-01-30 09:07:04.363 11 COMMIT 
+2015-01-30 09:07:04.383 11 select this_.id as id1_0_0_, this_.email as email2_0_0_, this_.first as first3_0_0_, this_.last as last4_0_0_, this_.cell as cell5_0_0_, this_.pref as pref6_0_0_, this_.resort as resort7_0_0_, this_.skiday as skiday8_0_0_, this_.skill as skill9_0_0_ from skidummy.eventinfo this_ where this_.id=? (203)
+2015-01-30 09:07:04.383 11 COMMIT 
+2015-01-30 09:07:04.403 11 delete from skidummy.eventinfo where id=? (203)
+2015-01-30 09:07:04.403 11 COMMIT 
+2015-01-30 09:07:04.413 11 delete from skidummy.eventinfo 
+2015-01-30 09:07:04.413 11 COMMIT 
+2015-01-30 09:07:04.533 17 delete from skidummy.eventinfo 
+2015-01-30 09:07:04.533 17 COMMIT 
+2015-01-30 09:07:04.563 16 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-31','Hack')
+2015-01-30 09:07:04.563 16 COMMIT 
+2015-01-30 09:07:04.613 16 delete from skidummy.eventinfo 
+2015-01-30 09:07:04.613 16 COMMIT 
+2015-01-30 09:07:04.623 15 insert into skidummy.eventinfo (id, email, first, last, cell, pref, resort, skiday, skill) values (default, ?, ?, ?, ?, ?, ?, ?, ?) ('Joe.Doe@Inter.Net','Joe','Doe','303-333-3333','Snowboard','Copper',DATE'2015-01-31','Hack')
+2015-01-30 09:07:04.623 15 COMMIT 
+2015-01-30 09:07:04.643 11 ROLLBACK 
+2015-01-30 09:07:04.643 12 ROLLBACK 
+2015-01-30 09:07:04.643 10 ROLLBACK 
+2015-01-30 09:07:04.643 13 ROLLBACK 
+2015-01-30 09:07:04.643 14 ROLLBACK 
+2015-01-30 09:07:04.643 17 ROLLBACK 
+2015-01-30 09:07:04.643 16 ROLLBACK 
+2015-01-30 09:07:04.643 15 ROLLBACK 

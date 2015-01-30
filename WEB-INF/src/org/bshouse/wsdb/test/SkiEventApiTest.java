@@ -140,7 +140,7 @@ public class SkiEventApiTest {
 	
 	/*
 	 * 
-	 * Test ski-event addition with a validation failure
+	 * Test ski-event addition with a validation failure for invalid phone number
 	 * 
 	 */
 	@Test
@@ -170,6 +170,40 @@ public class SkiEventApiTest {
 		String content = IOUtils.toString(hr.getEntity().getContent()); //Get Response body
 		System.out.println("testskieventAddOverflow: "+content); //Output for debugging
 		assertTrue(content.indexOf("Phone number must not exceed 30 characters") > -1 ); //Assert True response
+	}
+	
+	
+	/*
+	 * 
+	 * Test ski-event addition with a validation failure for invalid name (What if no name is provided?)
+	 * 
+	 */
+	@Test
+	public void testskieventNoName() throws ClientProtocolException, IOException {
+		cleanDb(); //Empty DB
+		HttpClient httpclient = HttpClients.createDefault(); //Create HTTP Client
+		HttpPost post = new HttpPost(baseUrl+"/api/1.0/skievent"); //Create POST request
+
+		//Build JSON request data
+		SkiEvent se = new SkiEvent();
+		// no names provided
+		se.setEmail("Joe.Doe@Inter.Net");
+		se.setNumberCell("303-333-3333");
+		se.setPref("Snowboard");
+		se.setResort("Copper");
+		Calendar c = Calendar.getInstance();
+		c.add(Calendar.DAY_OF_YEAR, 1);
+		se.setSkiday(c.getTime());
+		se.setSkill("Hack");
+		
+		StringEntity input = new StringEntity(g.toJson(se));
+		input.setContentType("application/json");
+		post.setEntity(input);
+
+		HttpResponse hr = httpclient.execute(post); //Execute the POST
+		String content = IOUtils.toString(hr.getEntity().getContent()); //Get Response body
+		System.out.println("testskieventNoName: "+content); //Output for debugging
+		assertTrue(content.indexOf("\"success\":false,\"message\":\"\\nFirst Name is a required field.\"") > -1);
 	}
 	
 
