@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.io.IOUtils;
@@ -203,7 +202,7 @@ public class SkiEventApiTest {
 		HttpResponse hr = httpclient.execute(post); //Execute the POST
 		String content = IOUtils.toString(hr.getEntity().getContent()); //Get Response body
 		System.out.println("testskieventNoName: "+content); //Output for debugging
-		assertTrue(content.indexOf("\"success\":false,\"message\":\"\\nFirst Name is a required field.\"") > -1);
+		assertTrue(content.indexOf("\"success\":false") > -1 && content.indexOf("\"message\":\"\\nFirst Name is a required field.\"") > -1);
 	}
 	
 
@@ -264,7 +263,7 @@ public class SkiEventApiTest {
 		content = IOUtils.toString(hr.getEntity().getContent()); //Get response body
 		System.out.println("testUpdateskievent: "+content); //Output for debugging
 		//Ensure it was successful and the email address changed as expected
-		assertTrue(content.indexOf("\"success\":false,\"message\":\"Update failed because required data is missing\"") > -1);
+		assertTrue(content.indexOf("\"success\":false") > -1 && content.indexOf("\"message\":\"Update failed because required data is missing\"") > -1);
 	}
 	
 	
@@ -311,7 +310,7 @@ public class SkiEventApiTest {
 		hr = httpclient.execute(del); //Execute DELETE request
 		content = IOUtils.toString(hr.getEntity().getContent()); //Get response body
 		System.out.println("testDeleteskievent: "+content); //Output for debugging
-		assertTrue(content.indexOf("\"success\":true,\"message\":\"Ski Event deleted\"") > -1); //Ensure success
+		assertTrue(content.indexOf("\"success\":true") > -1 && content.indexOf("\"message\":\"Ski Event deleted\"") > -1); //Ensure success
 	}
 
 	/*
@@ -331,7 +330,7 @@ public class SkiEventApiTest {
 		System.out.println("testDeleteInvalidskievent: "+content); //Output for debugging
 		//Ensure the proper error message was returned
 		
-		assertTrue(content.indexOf("\"success\":false,\"message\":\"Delete failed because required data is missing\"") > -1);
+		assertTrue(content.indexOf("\"success\":false") > -1 && content.indexOf("\"message\":\"Delete failed because required data is missing\"") > -1);
 	}
 	
 }
