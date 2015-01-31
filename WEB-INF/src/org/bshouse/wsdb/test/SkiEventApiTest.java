@@ -89,7 +89,7 @@ public class SkiEventApiTest {
 		HttpResponse hr = httpclient.execute(get); //Run the request
 		String content = IOUtils.toString(hr.getEntity().getContent()); //Get the response body
 		System.out.println("1. testskieventList: "+content); //Output the body for debugging
-		assertTrue(content.equals("{\"data\":[],\"success\":true}")); //Assert we got a blank list
+		assertTrue(content.indexOf("{\"data\":[]") > -1 && content.indexOf("\"success\":true") > -1); //Assert we got a blank list
 		
 		
 		addskievent("Bill"); //Add skievent Bill
@@ -99,7 +99,7 @@ public class SkiEventApiTest {
 		hr = httpclient.execute(get); //Execute the Request
 		content = IOUtils.toString(hr.getEntity().getContent()); //Get the response body
 		System.out.println("2. testskieventList: "+content); //Output the body for debugging
-		assertTrue(content.endsWith(",\"success\":true}")); //Assert we got a success
+		assertTrue(content.indexOf("\"success\":true") > -1); //Assert we got a success
 	}
 	
 	/*
@@ -133,7 +133,7 @@ public class SkiEventApiTest {
 		HttpResponse hr = httpclient.execute(post); //Execute the POST
 		String content = IOUtils.toString(hr.getEntity().getContent()); //Get Response body
 		System.out.println("testAddskievent: "+content); //Output for debugging
-		assertTrue(content.endsWith(",\"success\":true}")); //Assert True response
+		assertTrue(content.indexOf("\"success\":true") > -1); //Assert True response
 	}
 	
 	
@@ -239,7 +239,7 @@ public class SkiEventApiTest {
 		HttpResponse hr = httpclient.execute(post); //Execute POST request
 		String content = IOUtils.toString(hr.getEntity().getContent()); //Get response body
 		System.out.println("testUpdateskievent(Add): "+content); //Output for debugging
-		assertTrue(content.endsWith(",\"success\":true}")); //Assert skievent was added
+		assertTrue(content.indexOf("\"success\":true") > -1); //Assert skievent was added
 		
 		//Parse the ID of the newly added skievent
 		String id = StringUtils.substringBetween(content,"\"id\":", ",");
@@ -298,7 +298,7 @@ public class SkiEventApiTest {
 		HttpResponse hr = httpclient.execute(post); //Execute the POST
 		String content = IOUtils.toString(hr.getEntity().getContent()); //Get Response body
 		System.out.println("testAddskievent: "+content); //Output for debugging
-		assertTrue(content.endsWith(",\"success\":true}")); //Assert True response
+		assertTrue(content.indexOf("\"success\":true") > -1); //Assert True response
 		
 		//Parse the ID of the newly added skievent
 		String id = StringUtils.substringBetween(content,"\"id\":", ",");
