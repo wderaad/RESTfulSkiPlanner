@@ -22,8 +22,9 @@ ant TestServer
 ant ProdServer
 
 ## Run Server Tests
-1. Run: ant -lib WEB-INF/lib junitretport
-2. Open junit/all-tests.html in a web browser
+1. Run: ant -lib WEB-INF/lib SkiEventApiTest
+2. Run: ant -lib WEB-INF/lib junitretport
+3. Open junit/all-tests.html in a web browser
 
 ## Web Client
 1. Start either the Test or Production server
