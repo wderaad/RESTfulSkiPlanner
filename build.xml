@@ -72,6 +72,7 @@
         <pathelement location="WEB-INF/lib/httpmime-4.3.6.jar"/>
         <pathelement location="WEB-INF/lib/commons-io-2.4.jar"/>
         <pathelement location="WEB-INF/lib/junit.jar"/>
+        <pathelement location="WEB-INF/lib/ant-junit.jar"/>
         <pathelement location="WEB-INF/lib/org.hamcrest.core_1.3.0.v201303031735.jar"/>
     </path>
     <target name="init">
@@ -139,7 +140,7 @@
             <classpath refid="RESTfulSkiPlanner.classpath"/>
         </java>
     </target>
-    <target name="DBTest (1)">
+    <target name="DBTest">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
