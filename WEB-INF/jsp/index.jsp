@@ -50,7 +50,7 @@ $(function() {
 	    
 	    dialog = $( "#contactPopupDiv" ).dialog({
 	        autoOpen: false,
-	        height: 380,
+	        height: 420,
 	        width: 540,
 	        modal: true,
 	        dialogClass: "noclose",
@@ -111,16 +111,33 @@ $(function() {
 	        changeYear: true,
 	        yearRange: ((new Date().getFullYear())-100)+':'+(new Date().getFullYear())
 	      });
+	    $.fn.serializeObject = function()
+	    {
+	        var o = {};
+	        var a = this.serializeArray();
+	        $.each(a, function() {
+	            if (o[this.name] !== undefined) {
+	                if (!o[this.name].push) {
+	                    o[this.name] = [o[this.name]];
+	                }
+	                o[this.name].push(this.value || '');
+	            } else {
+	                o[this.name] = this.value || '';
+	            }
+	        });
+	        return o;
+	    };
 	});
 });
 
 
 var sendContact = function() {
-	var cId = document.getElementById("contactPopupForm")['eventinfo.id'].value;
+	var cId = document.getElementById("eventinfoPopupForm")['id'].value;
 	var method = (cId ? "PUT" : "POST");
 	$.ajax({
 	    type: method,
-		data: $('#eventinfoPopupForm').serialize(),
+	    contentType: "application/json",
+		data: JSON.stringify($('#eventinfoPopupForm').serializeObject()),
 		//Added line below to attempt to conform to JSON
 		datatype: "text",
 		url: restURL+contactBase+cId
@@ -146,30 +163,30 @@ var showMessage = function(data) {
 	return data.success;
 }
 
-var fillContactForm = function(contactData) {
-	var form = document.getElementById("contactPopupForm");
-	form['eventinfo.id'].value=(eventinfoData.id ? eventinfoData.id : "");
-	form['eventinfo.nameFirst'].value=(eventinfoData.nameFirst ? eventinfoData.nameFirst : "");
-	form['eventinfo.nameLast'].value=(eventinfoData.nameLast ? eventinfoData.nameLast : "");
-	form['eventinfo.numberCell'].value=(eventinfoData.numberCell ? eventinfoData.numberCell : "");
-	form['eventinfo.email'].value=(eventinfoData.email ? eventinfoData.email : "");
-	form['eventinfo.skiday'].value=(eventinfoData.skiday ? eventinfoData.skiday : "");
-    form['eventinfo.resort'].value=(eventinfoData.resort ? eventinfoData.resort : "");
-	form['eventinfo.pref'].value=(eventinfoData.pref ? eventinfoData.pref : "");
-	form['eventinfo.skill'].value=(eventinfoData.skill ? eventinfoData.skill : "");
+var fillContactForm = function(eventinfoData) {
+	var form = document.getElementById("eventinfoPopupForm");
+	form['id'].value=(eventinfoData.id ? eventinfoData.id : "");
+	form['nameFirst'].value=(eventinfoData.nameFirst ? eventinfoData.nameFirst : "");
+	form['nameLast'].value=(eventinfoData.nameLast ? eventinfoData.nameLast : "");
+	form['numberCell'].value=(eventinfoData.numberCell ? eventinfoData.numberCell : "");
+	form['email'].value=(eventinfoData.email ? eventinfoData.email : "");
+	form['skiday'].value=(eventinfoData.skiday ? eventinfoData.skiday : "");
+    form['resort'].value=(eventinfoData.resort ? eventinfoData.resort : "");
+	form['pref'].value=(eventinfoData.pref ? eventinfoData.pref : "");
+	form['skill'].value=(eventinfoData.skill ? eventinfoData.skill : "");
 	return;
 } 
 var resetContactForm = function() {
-	var form = document.getElementById("contactPopupForm");
-	form['eventinfo.id'].value="";
-	form['eventinfo.nameFirst'].value="";
-	form['eventinfo.nameLast'].value="";
-	form['eventinfo.numberCell'].value="";
-	form['eventinfo.email'].value="";
-	form['eventinfo.sday'].value="";
-	form['eventinfo.resort'].value="";
-	form['eventinfo.pref'].value="";
-	form['eventinfo.skill'].value="";
+	var form = document.getElementById("eventinfoPopupForm");
+	form['id'].value="";
+	form['nameFirst'].value="";
+	form['nameLast'].value="";
+	form['numberCell'].value="";
+	form['email'].value="";
+	form['skiday'].value="";
+	form['resort'].value="";
+	form['pref'].value="";
+	form['skill'].value="";
 	return;
 }
 </script>
@@ -185,44 +202,44 @@ var resetContactForm = function() {
 </table>
 
 <div id="contactPopupDiv" title="Contact Form">
-<form id="contactPopupForm">
+<form id="eventinfoPopupForm">
 <br/>
 <table>
 	<tbody id="eventinfoPopupFormTable">
 		<tr>
 			<th>First Name</th>
-			<td><input type="text" name="eventinfo.nameFirst" maxlength="254"/></td>
+			<td><input type="text" name="nameFirst" maxlength="254"/></td>
 		</tr>
 		<tr>
 			<th>Last Name</th>
-			<td><input type="text" name="eventinfo.nameLast" maxlength="254"/></td>
+			<td><input type="text" name="nameLast" maxlength="254"/></td>
 		</tr>
 		<tr>
 			<th>Phone Number</th>
-			<td><input type="text" name="eventinfo.numberCell" maxlength="30"/></td>
+			<td><input type="text" name="numberCell" maxlength="30"/></td>
 		</tr>
 		<tr>
 			<th>Email Address</th>
-			<td><input type="text" name="eventinfo.email" maxlength="254"/></td>
+			<td><input type="text" name="email" maxlength="254"/></td>
 		</tr>
 		<tr>
 			<th>Ski Day</th>
 			<td>
-				<input id="datePicker" type="text" name="eventinfo.sday" maxlength="10"/>
-				<input type="hidden" name="eventinfo.id" value=""/>
+				<input id="datePicker" type="text" name="skiday" maxlength="10"/>
+				<input type="hidden" name="id" value=""/>
 			</td>
 		</tr>
 		<tr>
 			<th>Ski Resort</th>
-			<td><input type="text" name="eventinfo.resort" maxlength="254"/></td>
+			<td><input type="text" name="resort" maxlength="254"/></td>
 		</tr>
 		<tr>
-			<th>Prefered Method</th>
-			<td><input type="text" name="eventinfo.pref" maxlength="254"/></td>
+			<th>Preferred Method</th>
+			<td><input type="text" name="pref" maxlength="254"/></td>
 		</tr>
 		<tr>
 			<th>Skill Level</th>
-			<td><input type="text" name="eventinfo.skill" maxlength="254"/></td>
+			<td><input type="text" name="skill" maxlength="254"/></td>
 		</tr>
 	</tbody>
 </table>

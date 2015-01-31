@@ -9,13 +9,13 @@ import java.util.Map;
 import org.apache.commons.lang3.StringUtils;
 import org.bshouse.wsdb.beans.SkiEvent;
 import org.bshouse.wsdb.common.Constants;
+import org.bshouse.wsdb.common.GsonFactory;
 import org.bshouse.wsdb.common.HibernateUtil;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 import net.sourceforge.stripes.action.DefaultHandler;
 import net.sourceforge.stripes.action.HttpCache;
@@ -37,7 +37,7 @@ public class SkiEventApiAction extends BaseAction {
     //Database Access
 	private Session db = HibernateUtil.getSession();
     //Java Object to JSON converter
-	private Gson g = new GsonBuilder().setDateFormat("MM/dd/yyyy").create();
+	private Gson g = GsonFactory.getGson();
     //HashMap to be converted to JSON
 	private Map<String,Object> json = new HashMap<String,Object>();
     //Stripes put the ID from the URL here
@@ -113,7 +113,12 @@ public class SkiEventApiAction extends BaseAction {
 	 *already existing event.
 	 */
 	public void add() {
-		SkiEvent skievent = g.fromJson(getRequestBody(), SkiEvent.class);
+		SkiEvent skievent = null;
+		try {
+			skievent = g.fromJson(getRequestBody(), SkiEvent.class);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 		//Add a Ski Event
 		if(skievent != null) {
 			//Stripes put something in the Ski Event object
@@ -164,8 +169,12 @@ public class SkiEventApiAction extends BaseAction {
 	 * the function will add it as a new record.
 	 */
 	public void update() {
-		SkiEvent skievent = g.fromJson(getRequestBody(), SkiEvent.class);
-		
+		SkiEvent skievent = null;
+		try {
+			skievent = g.fromJson(getRequestBody(), SkiEvent.class);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 		if(skievent != null && id != null && skievent.getId().equals(Long.parseLong(id))) {
 			//We got a Ski Event, that was PUT to a URL with an ID number and the Ski Event.id matches the URL ID
 			if(skievent.valid().length() == 0) {
