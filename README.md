@@ -8,6 +8,8 @@ A simple REST application for basic contact management (See the Wiki for more de
 * Jetty
 * Hibernate
 * HSQLDB
+* JQuery
+* JQuery UI
 
 
 ## Build/Compile
@@ -20,8 +22,12 @@ ant TestServer
 ant ProdServer
 
 ## Run Server Tests
-ant SkiEventApiTest
+1. Run: ant -lib WEB-INF/lib junitretport
+2. Open junit/all-tests.html in a web browser
 
+## Web Client
+1. Start either the Test or Production server
+2. Point your web browser to http://localhost:8080
 
 (Note: All 'ant' commands should be run where the build.xml file is located.)
 
